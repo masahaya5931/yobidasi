@@ -36,9 +36,7 @@ class Main():
         style.configure("TFrame", background = "white")
         style.configure("TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
         style.configure("startup_ver.TLabel", font = ("Yu Gothic UI", 25, "bold"), anchor = "center", background = "white")
-        style.configure("startup_notice.TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
         style.configure("logo.TLabel", background = "white")
-        style.configure("ver.TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
         style.configure("notice.TLabel", font = ("Yu Gothic UI", 30, "bold"), anchor = "center", background = "white")
         style.configure("TNotebook", background = "white")
         style.configure("TNotebook.Tab", width = 300, font = ("Yu Gothic UI", 35, "bold"), anchor = "center", background = "whitesmoke")
@@ -78,7 +76,7 @@ class Main():
         ver_label.place(x = 0, y = 100, width = 300 + 20, height = 150 - 100)
 
         text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます\n(C) 2023 cyber-yuito723\n終了：「Ctrl」キー＋「Q」キー"
-        text_label = ttk.Label(startup_frame, text = text, style = "startup_notice.TLabel")
+        text_label = ttk.Label(startup_frame, text = text, style = "TLabel")
         text_label.place(x = 300 + 20, y = 0, width = 700 - 300 - 20, height = 150)
 
     def header(self):
@@ -91,7 +89,7 @@ class Main():
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}\n{settings.school_name}\n{settings.admin_name}"
-        ver_label = ttk.Label(header, text = ver, style = "ver.TLabel")
+        ver_label = ttk.Label(header, text = ver, style = "TLabel")
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = "呼びたい先生のボタンを押してください"
@@ -147,16 +145,16 @@ class Main():
         ttk.Button(main_tab_0, text = settings.t0_3_4_n, state = settings.t0_3_4_s, command = lambda: self.confirm(settings.t0_3_4_n, settings.t0_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_0, text = settings.t0_4_4_n, state = settings.t0_4_4_s, command = lambda: self.confirm(settings.t0_4_4_n, settings.t0_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_0.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_0.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_0.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_0.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_0.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_0.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_0.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_0.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_0.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_0.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_0.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_0.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_0.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_0.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_0.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_0.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_0.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_0.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_0.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_0.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def main_tab_1(self):
         main_tab_1 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -192,16 +190,16 @@ class Main():
         ttk.Button(main_tab_1, text = settings.t1_3_4_n, state = settings.t1_3_4_s, command = lambda: self.confirm(settings.t1_3_4_n, settings.t1_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_1, text = settings.t1_4_4_n, state = settings.t1_4_4_s, command = lambda: self.confirm(settings.t1_4_4_n, settings.t1_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_1.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_1.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_1.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_1.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_1.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_1.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_1.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_1.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_1.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_1.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_1.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_1.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_1.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_1.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_1.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_1.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_1.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_1.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_1.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_1.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def main_tab_2(self):
         main_tab_2 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -237,16 +235,16 @@ class Main():
         ttk.Button(main_tab_2, text = settings.t2_3_4_n, state = settings.t2_3_4_s, command = lambda: self.confirm(settings.t2_3_4_n, settings.t2_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_2, text = settings.t2_4_4_n, state = settings.t2_4_4_s, command = lambda: self.confirm(settings.t2_4_4_n, settings.t2_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_2.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_2.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_2.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_2.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_2.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_2.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_2.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_2.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_2.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_2.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_2.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_2.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_2.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_2.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_2.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_2.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_2.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_2.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_2.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_2.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def main_tab_3(self):
         main_tab_3 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -282,16 +280,16 @@ class Main():
         ttk.Button(main_tab_3, text = settings.t3_3_4_n, state = settings.t3_3_4_s, command = lambda: self.confirm(settings.t3_3_4_n, settings.t3_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_3, text = settings.t3_4_4_n, state = settings.t3_4_4_s, command = lambda: self.confirm(settings.t3_4_4_n, settings.t3_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_3.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_3.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_3.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_3.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_3.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_3.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_3.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_3.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_3.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_3.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_3.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_3.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_3.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_3.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_3.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_3.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_3.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_3.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_3.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_3.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def main_tab_4(self):
         main_tab_4 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -327,16 +325,16 @@ class Main():
         ttk.Button(main_tab_4, text = settings.t4_3_4_n, state = settings.t4_3_4_s, command = lambda: self.confirm(settings.t4_3_4_n, settings.t4_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_4, text = settings.t4_4_4_n, state = settings.t4_4_4_s, command = lambda: self.confirm(settings.t4_4_4_n, settings.t4_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_4.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_4.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_4.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_4.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_4.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_4.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_4.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_4.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_4.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_4.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_4.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_4.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_4.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_4.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_4.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_4.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_4.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_4.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_4.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_4.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def main_tab_5(self):
         main_tab_5 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -372,16 +370,16 @@ class Main():
         ttk.Button(main_tab_5, text = settings.t5_3_4_n, state = settings.t5_3_4_s, command = lambda: self.confirm(settings.t5_3_4_n, settings.t5_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_5, text = settings.t5_4_4_n, state = settings.t5_4_4_s, command = lambda: self.confirm(settings.t5_4_4_n, settings.t5_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_5.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_5.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_5.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_5.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_5.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_5.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_5.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_5.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_5.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_5.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_5.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_5.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_5.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_5.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_5.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_5.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_5.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_5.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_5.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_5.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def main_tab_6(self):
         main_tab_6 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -417,16 +415,16 @@ class Main():
         ttk.Button(main_tab_6, text = settings.t6_3_4_n, state = settings.t6_3_4_s, command = lambda: self.confirm(settings.t6_3_4_n, settings.t6_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_6, text = settings.t6_4_4_n, state = settings.t6_4_4_s, command = lambda: self.confirm(settings.t6_4_4_n, settings.t6_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_6.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_6.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_6.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_6.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_6.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_6.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_6.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_6.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_6.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_6.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_6.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_6.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_6.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_6.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_6.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_6.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_6.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_6.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_6.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_6.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def main_tab_7(self):
         main_tab_7 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -462,16 +460,16 @@ class Main():
         ttk.Button(main_tab_7, text = settings.t7_3_4_n, state = settings.t7_3_4_s, command = lambda: self.confirm(settings.t7_3_4_n, settings.t7_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_7, text = settings.t7_4_4_n, state = settings.t7_4_4_s, command = lambda: self.confirm(settings.t7_4_4_n, settings.t7_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_7.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_7.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_7.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_7.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_7.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_7.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_7.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_7.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_7.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_7.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_7.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_7.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_7.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_7.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_7.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_7.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_7.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_7.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_7.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_7.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def main_tab_8(self):
         main_tab_8 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -507,16 +505,16 @@ class Main():
         ttk.Button(main_tab_8, text = settings.t8_3_4_n, state = settings.t8_3_4_s, command = lambda: self.confirm(settings.t8_3_4_n, settings.t8_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_8, text = settings.t8_4_4_n, state = settings.t8_4_4_s, command = lambda: self.confirm(settings.t8_4_4_n, settings.t8_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_8.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_8.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_8.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_8.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_8.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_8.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_8.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_8.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_8.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_8.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_8.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_8.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_8.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_8.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_8.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_8.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_8.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_8.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_8.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_8.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def main_tab_9(self):
         main_tab_9 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -552,16 +550,16 @@ class Main():
         ttk.Button(main_tab_9, text = settings.t9_3_4_n, state = settings.t9_3_4_s, command = lambda: self.confirm(settings.t9_3_4_n, settings.t9_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main_tab_9, text = settings.t9_4_4_n, state = settings.t9_4_4_s, command = lambda: self.confirm(settings.t9_4_4_n, settings.t9_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main_tab_9.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_9.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_9.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_9.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_9.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main_tab_9.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_9.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_9.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_9.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main_tab_9.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main_tab_9.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main_tab_9.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main_tab_9.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main_tab_9.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main_tab_9.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main_tab_9.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main_tab_9.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main_tab_9.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main_tab_9.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main_tab_9.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def confirm(self, name, path):
         confirm = tk.Toplevel()
@@ -579,20 +577,20 @@ class Main():
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}\n{settings.school_name}\n{settings.admin_name}"
-        ver_label = ttk.Label(confirm, text = ver, style = "ver.TLabel")
+        ver_label = ttk.Label(confirm, text = ver, style = "TLabel")
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = f"{name}を呼びますか？"
         text_label = ttk.Label(confirm, text = text, style = "notice.TLabel")
-        text_label.place(x = (screen_width - 700) / 2, y = 100 + (screen_height - 100 - 300) / 2, width = 700, height = 100)
+        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2, width = button_width * 2 + 10, height = 100)
 
         text = "はい"
         button = ttk.Button(confirm, text = text, command = lambda: self.playsound(confirm, name, path), style = "yesno.TButton")
-        button.place(x = (screen_width - 700) / 2, y = 100 + (screen_height - 100 - 300) / 2 + 100, width = (700 - 10) / 2, height = 300 - 100)
+        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2 + 100, width = button_width, height = button_height)
 
         text = "いいえ"
         button = ttk.Button(confirm, text = text, command = confirm.destroy, style = "yesno.TButton")
-        button.place(x = (screen_width - 700) / 2 + 10 + (700 - 10 * 3) / 2 + 10, y = 100 + (screen_height - 100 - 300) / 2 + 100, width = (700 - 10) / 2, height = 300 - 100)
+        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2 + 100, width = button_width, height = button_height)
 
     def playsound(self, confirm, name, path):
         playsound = tk.Toplevel()
@@ -610,7 +608,7 @@ class Main():
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}\n{settings.school_name}\n{settings.admin_name}"
-        ver_label = ttk.Label(playsound, text = ver, style = "ver.TLabel")
+        ver_label = ttk.Label(playsound, text = ver, style = "TLabel")
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = f"{name}を呼んでいます"
@@ -641,24 +639,26 @@ class Main():
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}\n{settings.school_name}\n{settings.admin_name}"
-        ver_label = ttk.Label(exit, text = ver, style = "ver.TLabel")
+        ver_label = ttk.Label(exit, text = ver, style = "TLabel")
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = "TeaChimerを終了しますか？"
         text_label = ttk.Label(exit, text = text, style = "notice.TLabel")
-        text_label.place(x = (screen_width - 700) / 2, y = 100 + (screen_height - 100 - 300) / 2, width = 700, height = 100)
+        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2, width = button_width * 2 + 10, height = 100)
 
         text = "はい"
         button = ttk.Button(exit, text = text, command = self.master.destroy, style = "yesno.TButton")
-        button.place(x = (screen_width - 700) / 2, y = 100 + (screen_height - 100 - 300) / 2 + 100, width = (700 - 10) / 2, height = 300 - 100)
+        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2 + 100, width = button_width, height = button_height)
 
         text = "いいえ"
         button = ttk.Button(exit, text = text, command = exit.destroy, style = "yesno.TButton")
-        button.place(x = (screen_width - 700) / 2 + 10 + (700 - 10 * 3) / 2 + 10, y = 100 + (screen_height - 100 - 300) / 2 + 100, width = (700 - 10) / 2, height = 300 - 100)
+        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2 + 100, width = button_width, height = button_height)
 
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
+button_width = (screen_width - 10 * 6) / 5
+button_height = (screen_height - 100 - 30 - 10 * 6) / 5
 version = "v1.0.0"
 app = Main(root)
 root.mainloop()
