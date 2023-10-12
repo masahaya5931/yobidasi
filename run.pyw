@@ -40,8 +40,7 @@ class Main():
         style.configure("notice.TLabel", font = ("Yu Gothic UI", 30, "bold"), anchor = "center", background = "white")
         style.configure("TNotebook", background = "white")
         style.configure("TNotebook.Tab", width = 300, font = ("Yu Gothic UI", 35, "bold"), anchor = "center", background = "whitesmoke")
-        style.configure("TButton", font = ("Yu Gothic UI", 20, "bold"), background = "whitesmoke")
-        style.configure("yesno.TButton", font = ("Yu Gothic UI", 30, "bold"), background = "whitesmoke")
+        style.configure("TButton", font = ("Yu Gothic UI", 25, "bold"), background = "whitesmoke")
         style.map("TNotebook.Tab", background = [("selected", "white")])
         style.map("TButton", background = [("active", "whitesmoke"), ("disabled", "lightgray")])
 
@@ -582,15 +581,15 @@ class Main():
 
         text = f"{name}を呼びますか？"
         text_label = ttk.Label(confirm, text = text, style = "notice.TLabel")
-        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2, width = button_width * 2 + 10, height = 100)
+        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - button_height + 30 - 50 - 10) / 2), width = (button_width * 2) + 10, height = 50 + 10)
 
         text = "はい"
-        button = ttk.Button(confirm, text = text, command = lambda: self.playsound(confirm, name, path), style = "yesno.TButton")
-        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2 + 100, width = button_width, height = button_height)
+        button = ttk.Button(confirm, text = text, command = lambda: self.playsound(confirm, name, path), style = "TButton")
+        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - button_height + 30 - 50 - 10) / 2) + (50 + 10), width = button_width, height = button_height)
 
         text = "いいえ"
-        button = ttk.Button(confirm, text = text, command = confirm.destroy, style = "yesno.TButton")
-        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2 + 100, width = button_width, height = button_height)
+        button = ttk.Button(confirm, text = text, command = confirm.destroy, style = "TButton")
+        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - button_height + 30 - 50 - 10) / 2) + (50 + 10), width = button_width, height = button_height)
 
     def playsound(self, confirm, name, path):
         playsound = tk.Toplevel()
@@ -644,15 +643,15 @@ class Main():
 
         text = "TeaChimerを終了しますか？"
         text_label = ttk.Label(exit, text = text, style = "notice.TLabel")
-        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2, width = button_width * 2 + 10, height = 100)
+        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - button_height + 30 - 50 - 10) / 2), width = (button_width * 2) + 10, height = 50 + 10)
 
         text = "はい"
-        button = ttk.Button(exit, text = text, command = self.master.destroy, style = "yesno.TButton")
-        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2 + 100, width = button_width, height = button_height)
+        button = ttk.Button(exit, text = text, command = self.master.destroy, style = "TButton")
+        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - button_height + 30 - 50 - 10) / 2) + (50 + 10), width = button_width, height = button_height)
 
         text = "いいえ"
-        button = ttk.Button(exit, text = text, command = exit.destroy, style = "yesno.TButton")
-        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + (screen_height - 100 - button_height - 30 * 3) / 2 + 100, width = button_width, height = button_height)
+        button = ttk.Button(exit, text = text, command = exit.destroy, style = "TButton")
+        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - button_height + 30 - 50 - 10) / 2) + (50 + 10), width = button_width, height = button_height)
 
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
