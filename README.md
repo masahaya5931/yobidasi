@@ -2,6 +2,7 @@
     <img src = "./logo/logo-2_small.png" alt = "logo-2_small.png"></img>
     <img src = "./logo/logo-2_beta_small.png" alt = "logo-2_beta_small.png"></img>
 </div>
+<br>
 <div>
     <img src = "https://img.shields.io/github/languages/top/cyber-yuito723/TeaChimer?style=flat-square" alt = "GitHub top language">
     <img src = "https://img.shields.io/github/repo-size/cyber-yuito723/TeaChimer?style=flat-square" alt = "GitHub repo size">
