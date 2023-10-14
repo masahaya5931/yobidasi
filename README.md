@@ -13,5 +13,30 @@
     <img src = "https://img.shields.io/github/release-date/cyber-yuito723/TeaChimer?style=flat-square" alt = "GitHub Release Date - Published_At">
     <img src = "https://img.shields.io/github/contributors/cyber-yuito723/TeaChimer?style=flat-square" alt = "GitHub contributors">
 </div>
+<br>
+<p>
+    <strong>最終更新日：２０２３年１０月１４日</strong>
+</p>
+
 <h1>TeaChimer</h1>
-<p>　職員室で先生を呼び出すためのPython3プログラム（GUIソフト）です。</p>
+<p>
+　職員室で先生を呼び出すためのPython3プログラム（GUIソフト）です。
+</p>
+
+<h2>概要</h2>
+<p>
+　このPythonプログラムは、学校の職員室おいて生徒が先生の呼び出しをスムーズに行うために開発しているものです。「TeaChimer」は、このプログラムやそれに付帯するコンテンツ、又はこのプロジェクト名などの総称を指します。また、「TeaChimer」の名称の由来は、「teacher」と「chime」を掛け合わせた造語に～する人を表す接尾辞の「er」を付けたことから来ています。そして、開発は日本の学生が行いました。
+</p>
+
+<h2>ライセンスについて</h2>
+<p>
+　このPython3プログラムは、オープンソースソフトウェアであり、<a href = "https://github.com/cyber-yuito723/TeaChimer-publicver/blob/main/LICENSE">GNU General Public License v3.0</a>に基づいて再配布したり改変したりできます。また、GPLライセンスのため、利用する場合は以下のクレジット表記を追加してください。
+</p>
+<pre>(C) 2023 cyber-yuito723</pre>
+
+<h2>リリース</h2>
+
+<h2>動作要件</h2>
+<p>
+　各リリースのリリースノートを確認してください。
+</p>
