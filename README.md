@@ -14,4 +14,4 @@
     <img src = "https://img.shields.io/github/contributors/cyber-yuito723/TeaChimer?style=flat-square" alt = "GitHub contributors">
 </div>
 <h1>TeaChimer</h1>
-<p>　職員室で教員を呼び出すためのPython3プログラム（GUIソフト）です。</p>
+<p>　職員室で先生を呼び出すためのPython3プログラム（GUIソフト）です。</p>
