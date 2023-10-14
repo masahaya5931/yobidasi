@@ -24,7 +24,7 @@
 
 <h2>ライセンスについて</h2>
 <p>
-　このPython3プログラムは、オープンソースソフトウェアであり、<a href = "https://github.com/cyber-yuito723/TeaChimer-publicver/blob/main/LICENSE">GNU General Public License v3.0</a>に基づいて再配布したり改変したりできます。また、GPLライセンスのため、利用する場合は以下のクレジット表記を追加してください。
+　このPython3プログラムは、オープンソースソフトウェアであり、<a href = "https://github.com/cyber-yuito723/TeaChimer/blob/main/LICENSE">GNU General Public License v3.0</a>に基づいて再配布したり改変したりできます。また、GPLライセンスのため、利用する場合は以下のクレジット表記を追加してください。
 </p>
 <pre>(C) 2023 cyber-yuito723</pre>
 
