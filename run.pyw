@@ -26,6 +26,7 @@ class Main():
     def __init__(self, master):
         self.master = master
         self.master.attributes("-fullscreen", True)
+        self.master.attributes("-topmost", True)
         self.master.iconbitmap("./system/logo-1_icon.ico")
         self.master.title(f"TeaChimer-{version}_MAIN")
         self.master.configure(background = "white")
