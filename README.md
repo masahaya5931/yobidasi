@@ -1,6 +1,6 @@
 <div align="center">
-    <img src = "./logo/logo-2_small.png" alt = "logo-2_small.png"></img>
-    <img src = "./logo/logo-2_beta_small.png" alt = "logo-2_beta_small.png"></img>
+    <img src = "./logo/logo-2_small.png" alt = "logo-2_small.png">
+    <img src = "./logo/logo-2_beta_small.png" alt = "logo-2_beta_small.png">
 </div>
 <br>
 <div>
