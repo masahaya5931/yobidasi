@@ -35,11 +35,6 @@
         <th>概要</th>
     </tr>
     <tr>
-        <td><a href = "https://github.com/cyber-yuito723/TeaChimer/releases/tag/v1.0.0">v1.0.0_BETA</a></td>
-        <td>２０２３年１０月１４日</td>
-        <td>新UIのTeaChimerで初めてのリリースです。（ベータ版）</td>
-    </tr>
-    <tr>
         <td><a href = "https://github.com/cyber-yuito723/TeaChimer/releases/tag/v1.0.0">v1.0.0</a></td>
         <td>２０２３年１０月１５日</td>
         <td>新UIのTeaChimerで初めてのリリースです。</td>
