@@ -111,455 +111,152 @@ class Main():
         self.main_tab_8()
         self.main_tab_9()
 
+    def buttons(self, tab_number,
+                xy_0_0_n, xy_0_0_s, xy_0_0_p, xy_1_0_n, xy_1_0_s, xy_1_0_p, xy_2_0_n, xy_2_0_s, xy_2_0_p, xy_3_0_n, xy_3_0_s, xy_3_0_p, xy_4_0_n, xy_4_0_s, xy_4_0_p,
+                xy_0_1_n, xy_0_1_s, xy_0_1_p, xy_1_1_n, xy_1_1_s, xy_1_1_p, xy_2_1_n, xy_2_1_s, xy_2_1_p, xy_3_1_n, xy_3_1_s, xy_3_1_p, xy_4_1_n, xy_4_1_s, xy_4_1_p,
+                xy_0_2_n, xy_0_2_s, xy_0_2_p, xy_1_2_n, xy_1_2_s, xy_1_2_p, xy_2_2_n, xy_2_2_s, xy_2_2_p, xy_3_2_n, xy_3_2_s, xy_3_2_p, xy_4_2_n, xy_4_2_s, xy_4_2_p,
+                xy_0_3_n, xy_0_3_s, xy_0_3_p, xy_1_3_n, xy_1_3_s, xy_1_3_p, xy_2_3_n, xy_2_3_s, xy_2_3_p, xy_3_3_n, xy_3_3_s, xy_3_3_p, xy_4_3_n, xy_4_3_s, xy_4_3_p,
+                xy_0_4_n, xy_0_4_s, xy_0_4_p, xy_1_4_n, xy_1_4_s, xy_1_4_p, xy_2_4_n, xy_2_4_s, xy_2_4_p, xy_3_4_n, xy_3_4_s, xy_3_4_p, xy_4_4_n, xy_4_4_s, xy_4_4_p):
+        ttk.Button(tab_number, text = xy_0_0_n, state = xy_0_0_s, command = lambda: self.confirm(xy_0_0_n, xy_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_1_0_n, state = xy_1_0_s, command = lambda: self.confirm(xy_1_0_n, xy_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_2_0_n, state = xy_2_0_s, command = lambda: self.confirm(xy_2_0_n, xy_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_3_0_n, state = xy_3_0_s, command = lambda: self.confirm(xy_3_0_n, xy_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_4_0_n, state = xy_4_0_s, command = lambda: self.confirm(xy_4_0_n, xy_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
+
+        ttk.Button(tab_number, text = xy_0_1_n, state = xy_0_1_s, command = lambda: self.confirm(xy_0_1_n, xy_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_1_1_n, state = xy_1_1_s, command = lambda: self.confirm(xy_1_1_n, xy_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_2_1_n, state = xy_2_1_s, command = lambda: self.confirm(xy_2_1_n, xy_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_3_1_n, state = xy_3_1_s, command = lambda: self.confirm(xy_3_1_n, xy_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_4_1_n, state = xy_4_1_s, command = lambda: self.confirm(xy_4_1_n, xy_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
+
+        ttk.Button(tab_number, text = xy_0_2_n, state = xy_0_2_s, command = lambda: self.confirm(xy_0_2_n, xy_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_1_2_n, state = xy_1_2_s, command = lambda: self.confirm(xy_1_2_n, xy_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_2_2_n, state = xy_2_2_s, command = lambda: self.confirm(xy_2_2_n, xy_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_3_2_n, state = xy_3_2_s, command = lambda: self.confirm(xy_3_2_n, xy_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_4_2_n, state = xy_4_2_s, command = lambda: self.confirm(xy_4_2_n, xy_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
+
+        ttk.Button(tab_number, text = xy_0_3_n, state = xy_0_3_s, command = lambda: self.confirm(xy_0_3_n, xy_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_1_3_n, state = xy_1_3_s, command = lambda: self.confirm(xy_1_3_n, xy_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_2_3_n, state = xy_2_3_s, command = lambda: self.confirm(xy_2_3_n, xy_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_3_3_n, state = xy_3_3_s, command = lambda: self.confirm(xy_3_3_n, xy_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_4_3_n, state = xy_4_3_s, command = lambda: self.confirm(xy_4_3_n, xy_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
+
+        ttk.Button(tab_number, text = xy_0_4_n, state = xy_0_4_s, command = lambda: self.confirm(xy_0_4_n, xy_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_1_4_n, state = xy_1_4_s, command = lambda: self.confirm(xy_1_4_n, xy_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_2_4_n, state = xy_2_4_s, command = lambda: self.confirm(xy_2_4_n, xy_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_3_4_n, state = xy_3_4_s, command = lambda: self.confirm(xy_3_4_n, xy_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(tab_number, text = xy_4_4_n, state = xy_4_4_s, command = lambda: self.confirm(xy_4_4_n, xy_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
+
+        tab_number.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        tab_number.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        tab_number.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        tab_number.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        tab_number.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        tab_number.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        tab_number.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        tab_number.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        tab_number.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        tab_number.grid_columnconfigure(4, minsize = button_width, weight = 1)
+
     def main_tab_0(self):
         main_tab_0 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_0, text = settings.main_tab_0_n)
-
-        ttk.Button(main_tab_0, text = settings.t0_0_0_n, state = settings.t0_0_0_s, command = lambda: self.confirm(settings.t0_0_0_n, settings.t0_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_1_0_n, state = settings.t0_1_0_s, command = lambda: self.confirm(settings.t0_1_0_n, settings.t0_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_2_0_n, state = settings.t0_2_0_s, command = lambda: self.confirm(settings.t0_2_0_n, settings.t0_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_3_0_n, state = settings.t0_3_0_s, command = lambda: self.confirm(settings.t0_3_0_n, settings.t0_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_4_0_n, state = settings.t0_4_0_s, command = lambda: self.confirm(settings.t0_4_0_n, settings.t0_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_0, text = settings.t0_0_1_n, state = settings.t0_0_1_s, command = lambda: self.confirm(settings.t0_0_1_n, settings.t0_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_1_1_n, state = settings.t0_1_1_s, command = lambda: self.confirm(settings.t0_1_1_n, settings.t0_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_2_1_n, state = settings.t0_2_1_s, command = lambda: self.confirm(settings.t0_2_1_n, settings.t0_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_3_1_n, state = settings.t0_3_1_s, command = lambda: self.confirm(settings.t0_3_1_n, settings.t0_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_4_1_n, state = settings.t0_4_1_s, command = lambda: self.confirm(settings.t0_4_1_n, settings.t0_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_0, text = settings.t0_0_2_n, state = settings.t0_0_2_s, command = lambda: self.confirm(settings.t0_0_2_n, settings.t0_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_1_2_n, state = settings.t0_1_2_s, command = lambda: self.confirm(settings.t0_1_2_n, settings.t0_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_2_2_n, state = settings.t0_2_2_s, command = lambda: self.confirm(settings.t0_2_2_n, settings.t0_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_3_2_n, state = settings.t0_3_2_s, command = lambda: self.confirm(settings.t0_3_2_n, settings.t0_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_4_2_n, state = settings.t0_4_2_s, command = lambda: self.confirm(settings.t0_4_2_n, settings.t0_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_0, text = settings.t0_0_3_n, state = settings.t0_0_3_s, command = lambda: self.confirm(settings.t0_0_3_n, settings.t0_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_1_3_n, state = settings.t0_1_3_s, command = lambda: self.confirm(settings.t0_1_3_n, settings.t0_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_2_3_n, state = settings.t0_2_3_s, command = lambda: self.confirm(settings.t0_2_3_n, settings.t0_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_3_3_n, state = settings.t0_3_3_s, command = lambda: self.confirm(settings.t0_3_3_n, settings.t0_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_4_3_n, state = settings.t0_4_3_s, command = lambda: self.confirm(settings.t0_4_3_n, settings.t0_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_0, text = settings.t0_0_4_n, state = settings.t0_0_4_s, command = lambda: self.confirm(settings.t0_0_4_n, settings.t0_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_1_4_n, state = settings.t0_1_4_s, command = lambda: self.confirm(settings.t0_1_4_n, settings.t0_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_2_4_n, state = settings.t0_2_4_s, command = lambda: self.confirm(settings.t0_2_4_n, settings.t0_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_3_4_n, state = settings.t0_3_4_s, command = lambda: self.confirm(settings.t0_3_4_n, settings.t0_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_0, text = settings.t0_4_4_n, state = settings.t0_4_4_s, command = lambda: self.confirm(settings.t0_4_4_n, settings.t0_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_0.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_0.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_0.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_0.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_0.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_0.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_0.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_0.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_0.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_0.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_0,
+                     settings.t0_0_0_n, settings.t0_0_0_s, settings.t0_0_0_p, settings.t0_1_0_n, settings.t0_1_0_s, settings.t0_1_0_p, settings.t0_2_0_n, settings.t0_2_0_s, settings.t0_2_0_p, settings.t0_3_0_n, settings.t0_3_0_s, settings.t0_3_0_p, settings.t0_4_0_n, settings.t0_4_0_s, settings.t0_4_0_p,
+                     settings.t0_0_1_n, settings.t0_0_1_s, settings.t0_0_1_p, settings.t0_1_1_n, settings.t0_1_1_s, settings.t0_1_1_p, settings.t0_2_1_n, settings.t0_2_1_s, settings.t0_2_1_p, settings.t0_3_1_n, settings.t0_3_1_s, settings.t0_3_1_p, settings.t0_4_1_n, settings.t0_4_1_s, settings.t0_4_1_p,
+                     settings.t0_0_2_n, settings.t0_0_2_s, settings.t0_0_2_p, settings.t0_1_2_n, settings.t0_1_2_s, settings.t0_1_2_p, settings.t0_2_2_n, settings.t0_2_2_s, settings.t0_2_2_p, settings.t0_3_2_n, settings.t0_3_2_s, settings.t0_3_2_p, settings.t0_4_2_n, settings.t0_4_2_s, settings.t0_4_2_p,
+                     settings.t0_0_3_n, settings.t0_0_3_s, settings.t0_0_3_p, settings.t0_1_3_n, settings.t0_1_3_s, settings.t0_1_3_p, settings.t0_2_3_n, settings.t0_2_3_s, settings.t0_2_3_p, settings.t0_3_3_n, settings.t0_3_3_s, settings.t0_3_3_p, settings.t0_4_3_n, settings.t0_4_3_s, settings.t0_4_3_p,
+                     settings.t0_0_4_n, settings.t0_0_4_s, settings.t0_0_4_p, settings.t0_1_4_n, settings.t0_1_4_s, settings.t0_1_4_p, settings.t0_2_4_n, settings.t0_2_4_s, settings.t0_2_4_p, settings.t0_3_4_n, settings.t0_3_4_s, settings.t0_3_4_p, settings.t0_4_4_n, settings.t0_4_4_s, settings.t0_4_4_p)
 
     def main_tab_1(self):
         main_tab_1 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_1, text = settings.main_tab_1_n)
-
-        ttk.Button(main_tab_1, text = settings.t1_0_0_n, state = settings.t1_0_0_s, command = lambda: self.confirm(settings.t1_0_0_n, settings.t1_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_1_0_n, state = settings.t1_1_0_s, command = lambda: self.confirm(settings.t1_1_0_n, settings.t1_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_2_0_n, state = settings.t1_2_0_s, command = lambda: self.confirm(settings.t1_2_0_n, settings.t1_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_3_0_n, state = settings.t1_3_0_s, command = lambda: self.confirm(settings.t1_3_0_n, settings.t1_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_4_0_n, state = settings.t1_4_0_s, command = lambda: self.confirm(settings.t1_4_0_n, settings.t1_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_1, text = settings.t1_0_1_n, state = settings.t1_0_1_s, command = lambda: self.confirm(settings.t1_0_1_n, settings.t1_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_1_1_n, state = settings.t1_1_1_s, command = lambda: self.confirm(settings.t1_1_1_n, settings.t1_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_2_1_n, state = settings.t1_2_1_s, command = lambda: self.confirm(settings.t1_2_1_n, settings.t1_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_3_1_n, state = settings.t1_3_1_s, command = lambda: self.confirm(settings.t1_3_1_n, settings.t1_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_4_1_n, state = settings.t1_4_1_s, command = lambda: self.confirm(settings.t1_4_1_n, settings.t1_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_1, text = settings.t1_0_2_n, state = settings.t1_0_2_s, command = lambda: self.confirm(settings.t1_0_2_n, settings.t1_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_1_2_n, state = settings.t1_1_2_s, command = lambda: self.confirm(settings.t1_1_2_n, settings.t1_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_2_2_n, state = settings.t1_2_2_s, command = lambda: self.confirm(settings.t1_2_2_n, settings.t1_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_3_2_n, state = settings.t1_3_2_s, command = lambda: self.confirm(settings.t1_3_2_n, settings.t1_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_4_2_n, state = settings.t1_4_2_s, command = lambda: self.confirm(settings.t1_4_2_n, settings.t1_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_1, text = settings.t1_0_3_n, state = settings.t1_0_3_s, command = lambda: self.confirm(settings.t1_0_3_n, settings.t1_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_1_3_n, state = settings.t1_1_3_s, command = lambda: self.confirm(settings.t1_1_3_n, settings.t1_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_2_3_n, state = settings.t1_2_3_s, command = lambda: self.confirm(settings.t1_2_3_n, settings.t1_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_3_3_n, state = settings.t1_3_3_s, command = lambda: self.confirm(settings.t1_3_3_n, settings.t1_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_4_3_n, state = settings.t1_4_3_s, command = lambda: self.confirm(settings.t1_4_3_n, settings.t1_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_1, text = settings.t1_0_4_n, state = settings.t1_0_4_s, command = lambda: self.confirm(settings.t1_0_4_n, settings.t1_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_1_4_n, state = settings.t1_1_4_s, command = lambda: self.confirm(settings.t1_1_4_n, settings.t1_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_2_4_n, state = settings.t1_2_4_s, command = lambda: self.confirm(settings.t1_2_4_n, settings.t1_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_3_4_n, state = settings.t1_3_4_s, command = lambda: self.confirm(settings.t1_3_4_n, settings.t1_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_1, text = settings.t1_4_4_n, state = settings.t1_4_4_s, command = lambda: self.confirm(settings.t1_4_4_n, settings.t1_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_1.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_1.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_1.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_1.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_1.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_1.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_1.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_1.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_1.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_1.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_1,
+                     settings.t1_0_0_n, settings.t1_0_0_s, settings.t1_0_0_p, settings.t1_1_0_n, settings.t1_1_0_s, settings.t1_1_0_p, settings.t1_2_0_n, settings.t1_2_0_s, settings.t1_2_0_p, settings.t1_3_0_n, settings.t1_3_0_s, settings.t1_3_0_p, settings.t1_4_0_n, settings.t1_4_0_s, settings.t1_4_0_p,
+                     settings.t1_0_1_n, settings.t1_0_1_s, settings.t1_0_1_p, settings.t1_1_1_n, settings.t1_1_1_s, settings.t1_1_1_p, settings.t1_2_1_n, settings.t1_2_1_s, settings.t1_2_1_p, settings.t1_3_1_n, settings.t1_3_1_s, settings.t1_3_1_p, settings.t1_4_1_n, settings.t1_4_1_s, settings.t1_4_1_p,
+                     settings.t1_0_2_n, settings.t1_0_2_s, settings.t1_0_2_p, settings.t1_1_2_n, settings.t1_1_2_s, settings.t1_1_2_p, settings.t1_2_2_n, settings.t1_2_2_s, settings.t1_2_2_p, settings.t1_3_2_n, settings.t1_3_2_s, settings.t1_3_2_p, settings.t1_4_2_n, settings.t1_4_2_s, settings.t1_4_2_p,
+                     settings.t1_0_3_n, settings.t1_0_3_s, settings.t1_0_3_p, settings.t1_1_3_n, settings.t1_1_3_s, settings.t1_1_3_p, settings.t1_2_3_n, settings.t1_2_3_s, settings.t1_2_3_p, settings.t1_3_3_n, settings.t1_3_3_s, settings.t1_3_3_p, settings.t1_4_3_n, settings.t1_4_3_s, settings.t1_4_3_p,
+                     settings.t1_0_4_n, settings.t1_0_4_s, settings.t1_0_4_p, settings.t1_1_4_n, settings.t1_1_4_s, settings.t1_1_4_p, settings.t1_2_4_n, settings.t1_2_4_s, settings.t1_2_4_p, settings.t1_3_4_n, settings.t1_3_4_s, settings.t1_3_4_p, settings.t1_4_4_n, settings.t1_4_4_s, settings.t1_4_4_p)
 
     def main_tab_2(self):
         main_tab_2 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_2, text = settings.main_tab_2_n)
-
-        ttk.Button(main_tab_2, text = settings.t2_0_0_n, state = settings.t2_0_0_s, command = lambda: self.confirm(settings.t2_0_0_n, settings.t2_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_1_0_n, state = settings.t2_1_0_s, command = lambda: self.confirm(settings.t2_1_0_n, settings.t2_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_2_0_n, state = settings.t2_2_0_s, command = lambda: self.confirm(settings.t2_2_0_n, settings.t2_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_3_0_n, state = settings.t2_3_0_s, command = lambda: self.confirm(settings.t2_3_0_n, settings.t2_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_4_0_n, state = settings.t2_4_0_s, command = lambda: self.confirm(settings.t2_4_0_n, settings.t2_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_2, text = settings.t2_0_1_n, state = settings.t2_0_1_s, command = lambda: self.confirm(settings.t2_0_1_n, settings.t2_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_1_1_n, state = settings.t2_1_1_s, command = lambda: self.confirm(settings.t2_1_1_n, settings.t2_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_2_1_n, state = settings.t2_2_1_s, command = lambda: self.confirm(settings.t2_2_1_n, settings.t2_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_3_1_n, state = settings.t2_3_1_s, command = lambda: self.confirm(settings.t2_3_1_n, settings.t2_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_4_1_n, state = settings.t2_4_1_s, command = lambda: self.confirm(settings.t2_4_1_n, settings.t2_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_2, text = settings.t2_0_2_n, state = settings.t2_0_2_s, command = lambda: self.confirm(settings.t2_0_2_n, settings.t2_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_1_2_n, state = settings.t2_1_2_s, command = lambda: self.confirm(settings.t2_1_2_n, settings.t2_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_2_2_n, state = settings.t2_2_2_s, command = lambda: self.confirm(settings.t2_2_2_n, settings.t2_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_3_2_n, state = settings.t2_3_2_s, command = lambda: self.confirm(settings.t2_3_2_n, settings.t2_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_4_2_n, state = settings.t2_4_2_s, command = lambda: self.confirm(settings.t2_4_2_n, settings.t2_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_2, text = settings.t2_0_3_n, state = settings.t2_0_3_s, command = lambda: self.confirm(settings.t2_0_3_n, settings.t2_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_1_3_n, state = settings.t2_1_3_s, command = lambda: self.confirm(settings.t2_1_3_n, settings.t2_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_2_3_n, state = settings.t2_2_3_s, command = lambda: self.confirm(settings.t2_2_3_n, settings.t2_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_3_3_n, state = settings.t2_3_3_s, command = lambda: self.confirm(settings.t2_3_3_n, settings.t2_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_4_3_n, state = settings.t2_4_3_s, command = lambda: self.confirm(settings.t2_4_3_n, settings.t2_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_2, text = settings.t2_0_4_n, state = settings.t2_0_4_s, command = lambda: self.confirm(settings.t2_0_4_n, settings.t2_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_1_4_n, state = settings.t2_1_4_s, command = lambda: self.confirm(settings.t2_1_4_n, settings.t2_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_2_4_n, state = settings.t2_2_4_s, command = lambda: self.confirm(settings.t2_2_4_n, settings.t2_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_3_4_n, state = settings.t2_3_4_s, command = lambda: self.confirm(settings.t2_3_4_n, settings.t2_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_2, text = settings.t2_4_4_n, state = settings.t2_4_4_s, command = lambda: self.confirm(settings.t2_4_4_n, settings.t2_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_2.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_2.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_2.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_2.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_2.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_2.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_2.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_2.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_2.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_2.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_2,
+                     settings.t2_0_0_n, settings.t2_0_0_s, settings.t2_0_0_p, settings.t2_1_0_n, settings.t2_1_0_s, settings.t2_1_0_p, settings.t2_2_0_n, settings.t2_2_0_s, settings.t2_2_0_p, settings.t2_3_0_n, settings.t2_3_0_s, settings.t2_3_0_p, settings.t2_4_0_n, settings.t2_4_0_s, settings.t2_4_0_p,
+                     settings.t2_0_1_n, settings.t2_0_1_s, settings.t2_0_1_p, settings.t2_1_1_n, settings.t2_1_1_s, settings.t2_1_1_p, settings.t2_2_1_n, settings.t2_2_1_s, settings.t2_2_1_p, settings.t2_3_1_n, settings.t2_3_1_s, settings.t2_3_1_p, settings.t2_4_1_n, settings.t2_4_1_s, settings.t2_4_1_p,
+                     settings.t2_0_2_n, settings.t2_0_2_s, settings.t2_0_2_p, settings.t2_1_2_n, settings.t2_1_2_s, settings.t2_1_2_p, settings.t2_2_2_n, settings.t2_2_2_s, settings.t2_2_2_p, settings.t2_3_2_n, settings.t2_3_2_s, settings.t2_3_2_p, settings.t2_4_2_n, settings.t2_4_2_s, settings.t2_4_2_p,
+                     settings.t2_0_3_n, settings.t2_0_3_s, settings.t2_0_3_p, settings.t2_1_3_n, settings.t2_1_3_s, settings.t2_1_3_p, settings.t2_2_3_n, settings.t2_2_3_s, settings.t2_2_3_p, settings.t2_3_3_n, settings.t2_3_3_s, settings.t2_3_3_p, settings.t2_4_3_n, settings.t2_4_3_s, settings.t2_4_3_p,
+                     settings.t2_0_4_n, settings.t2_0_4_s, settings.t2_0_4_p, settings.t2_1_4_n, settings.t2_1_4_s, settings.t2_1_4_p, settings.t2_2_4_n, settings.t2_2_4_s, settings.t2_2_4_p, settings.t2_3_4_n, settings.t2_3_4_s, settings.t2_3_4_p, settings.t2_4_4_n, settings.t2_4_4_s, settings.t2_4_4_p)
 
     def main_tab_3(self):
         main_tab_3 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_3, text = settings.main_tab_3_n)
-
-        ttk.Button(main_tab_3, text = settings.t3_0_0_n, state = settings.t3_0_0_s, command = lambda: self.confirm(settings.t3_0_0_n, settings.t3_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_1_0_n, state = settings.t3_1_0_s, command = lambda: self.confirm(settings.t3_1_0_n, settings.t3_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_2_0_n, state = settings.t3_2_0_s, command = lambda: self.confirm(settings.t3_2_0_n, settings.t3_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_3_0_n, state = settings.t3_3_0_s, command = lambda: self.confirm(settings.t3_3_0_n, settings.t3_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_4_0_n, state = settings.t3_4_0_s, command = lambda: self.confirm(settings.t3_4_0_n, settings.t3_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_3, text = settings.t3_0_1_n, state = settings.t3_0_1_s, command = lambda: self.confirm(settings.t3_0_1_n, settings.t3_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_1_1_n, state = settings.t3_1_1_s, command = lambda: self.confirm(settings.t3_1_1_n, settings.t3_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_2_1_n, state = settings.t3_2_1_s, command = lambda: self.confirm(settings.t3_2_1_n, settings.t3_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_3_1_n, state = settings.t3_3_1_s, command = lambda: self.confirm(settings.t3_3_1_n, settings.t3_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_4_1_n, state = settings.t3_4_1_s, command = lambda: self.confirm(settings.t3_4_1_n, settings.t3_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_3, text = settings.t3_0_2_n, state = settings.t3_0_2_s, command = lambda: self.confirm(settings.t3_0_2_n, settings.t3_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_1_2_n, state = settings.t3_1_2_s, command = lambda: self.confirm(settings.t3_1_2_n, settings.t3_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_2_2_n, state = settings.t3_2_2_s, command = lambda: self.confirm(settings.t3_2_2_n, settings.t3_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_3_2_n, state = settings.t3_3_2_s, command = lambda: self.confirm(settings.t3_3_2_n, settings.t3_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_4_2_n, state = settings.t3_4_2_s, command = lambda: self.confirm(settings.t3_4_2_n, settings.t3_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_3, text = settings.t3_0_3_n, state = settings.t3_0_3_s, command = lambda: self.confirm(settings.t3_0_3_n, settings.t3_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_1_3_n, state = settings.t3_1_3_s, command = lambda: self.confirm(settings.t3_1_3_n, settings.t3_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_2_3_n, state = settings.t3_2_3_s, command = lambda: self.confirm(settings.t3_2_3_n, settings.t3_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_3_3_n, state = settings.t3_3_3_s, command = lambda: self.confirm(settings.t3_3_3_n, settings.t3_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_4_3_n, state = settings.t3_4_3_s, command = lambda: self.confirm(settings.t3_4_3_n, settings.t3_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_3, text = settings.t3_0_4_n, state = settings.t3_0_4_s, command = lambda: self.confirm(settings.t3_0_4_n, settings.t3_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_1_4_n, state = settings.t3_1_4_s, command = lambda: self.confirm(settings.t3_1_4_n, settings.t3_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_2_4_n, state = settings.t3_2_4_s, command = lambda: self.confirm(settings.t3_2_4_n, settings.t3_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_3_4_n, state = settings.t3_3_4_s, command = lambda: self.confirm(settings.t3_3_4_n, settings.t3_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_3, text = settings.t3_4_4_n, state = settings.t3_4_4_s, command = lambda: self.confirm(settings.t3_4_4_n, settings.t3_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_3.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_3.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_3.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_3.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_3.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_3.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_3.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_3.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_3.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_3.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_3,
+                     settings.t3_0_0_n, settings.t3_0_0_s, settings.t3_0_0_p, settings.t3_1_0_n, settings.t3_1_0_s, settings.t3_1_0_p, settings.t3_2_0_n, settings.t3_2_0_s, settings.t3_2_0_p, settings.t3_3_0_n, settings.t3_3_0_s, settings.t3_3_0_p, settings.t3_4_0_n, settings.t3_4_0_s, settings.t3_4_0_p,
+                     settings.t3_0_1_n, settings.t3_0_1_s, settings.t3_0_1_p, settings.t3_1_1_n, settings.t3_1_1_s, settings.t3_1_1_p, settings.t3_2_1_n, settings.t3_2_1_s, settings.t3_2_1_p, settings.t3_3_1_n, settings.t3_3_1_s, settings.t3_3_1_p, settings.t3_4_1_n, settings.t3_4_1_s, settings.t3_4_1_p,
+                     settings.t3_0_2_n, settings.t3_0_2_s, settings.t3_0_2_p, settings.t3_1_2_n, settings.t3_1_2_s, settings.t3_1_2_p, settings.t3_2_2_n, settings.t3_2_2_s, settings.t3_2_2_p, settings.t3_3_2_n, settings.t3_3_2_s, settings.t3_3_2_p, settings.t3_4_2_n, settings.t3_4_2_s, settings.t3_4_2_p,
+                     settings.t3_0_3_n, settings.t3_0_3_s, settings.t3_0_3_p, settings.t3_1_3_n, settings.t3_1_3_s, settings.t3_1_3_p, settings.t3_2_3_n, settings.t3_2_3_s, settings.t3_2_3_p, settings.t3_3_3_n, settings.t3_3_3_s, settings.t3_3_3_p, settings.t3_4_3_n, settings.t3_4_3_s, settings.t3_4_3_p,
+                     settings.t3_0_4_n, settings.t3_0_4_s, settings.t3_0_4_p, settings.t3_1_4_n, settings.t3_1_4_s, settings.t3_1_4_p, settings.t3_2_4_n, settings.t3_2_4_s, settings.t3_2_4_p, settings.t3_3_4_n, settings.t3_3_4_s, settings.t3_3_4_p, settings.t3_4_4_n, settings.t3_4_4_s, settings.t3_4_4_p)
 
     def main_tab_4(self):
         main_tab_4 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_4, text = settings.main_tab_4_n)
-
-        ttk.Button(main_tab_4, text = settings.t4_0_0_n, state = settings.t4_0_0_s, command = lambda: self.confirm(settings.t4_0_0_n, settings.t4_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_1_0_n, state = settings.t4_1_0_s, command = lambda: self.confirm(settings.t4_1_0_n, settings.t4_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_2_0_n, state = settings.t4_2_0_s, command = lambda: self.confirm(settings.t4_2_0_n, settings.t4_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_3_0_n, state = settings.t4_3_0_s, command = lambda: self.confirm(settings.t4_3_0_n, settings.t4_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_4_0_n, state = settings.t4_4_0_s, command = lambda: self.confirm(settings.t4_4_0_n, settings.t4_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_4, text = settings.t4_0_1_n, state = settings.t4_0_1_s, command = lambda: self.confirm(settings.t4_0_1_n, settings.t4_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_1_1_n, state = settings.t4_1_1_s, command = lambda: self.confirm(settings.t4_1_1_n, settings.t4_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_2_1_n, state = settings.t4_2_1_s, command = lambda: self.confirm(settings.t4_2_1_n, settings.t4_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_3_1_n, state = settings.t4_3_1_s, command = lambda: self.confirm(settings.t4_3_1_n, settings.t4_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_4_1_n, state = settings.t4_4_1_s, command = lambda: self.confirm(settings.t4_4_1_n, settings.t4_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_4, text = settings.t4_0_2_n, state = settings.t4_0_2_s, command = lambda: self.confirm(settings.t4_0_2_n, settings.t4_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_1_2_n, state = settings.t4_1_2_s, command = lambda: self.confirm(settings.t4_1_2_n, settings.t4_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_2_2_n, state = settings.t4_2_2_s, command = lambda: self.confirm(settings.t4_2_2_n, settings.t4_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_3_2_n, state = settings.t4_3_2_s, command = lambda: self.confirm(settings.t4_3_2_n, settings.t4_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_4_2_n, state = settings.t4_4_2_s, command = lambda: self.confirm(settings.t4_4_2_n, settings.t4_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_4, text = settings.t4_0_3_n, state = settings.t4_0_3_s, command = lambda: self.confirm(settings.t4_0_3_n, settings.t4_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_1_3_n, state = settings.t4_1_3_s, command = lambda: self.confirm(settings.t4_1_3_n, settings.t4_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_2_3_n, state = settings.t4_2_3_s, command = lambda: self.confirm(settings.t4_2_3_n, settings.t4_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_3_3_n, state = settings.t4_3_3_s, command = lambda: self.confirm(settings.t4_3_3_n, settings.t4_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_4_3_n, state = settings.t4_4_3_s, command = lambda: self.confirm(settings.t4_4_3_n, settings.t4_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_4, text = settings.t4_0_4_n, state = settings.t4_0_4_s, command = lambda: self.confirm(settings.t4_0_4_n, settings.t4_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_1_4_n, state = settings.t4_1_4_s, command = lambda: self.confirm(settings.t4_1_4_n, settings.t4_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_2_4_n, state = settings.t4_2_4_s, command = lambda: self.confirm(settings.t4_2_4_n, settings.t4_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_3_4_n, state = settings.t4_3_4_s, command = lambda: self.confirm(settings.t4_3_4_n, settings.t4_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_4, text = settings.t4_4_4_n, state = settings.t4_4_4_s, command = lambda: self.confirm(settings.t4_4_4_n, settings.t4_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_4.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_4.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_4.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_4.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_4.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_4.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_4.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_4.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_4.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_4.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_4,
+                     settings.t4_0_0_n, settings.t4_0_0_s, settings.t4_0_0_p, settings.t4_1_0_n, settings.t4_1_0_s, settings.t4_1_0_p, settings.t4_2_0_n, settings.t4_2_0_s, settings.t4_2_0_p, settings.t4_3_0_n, settings.t4_3_0_s, settings.t4_3_0_p, settings.t4_4_0_n, settings.t4_4_0_s, settings.t4_4_0_p,
+                     settings.t4_0_1_n, settings.t4_0_1_s, settings.t4_0_1_p, settings.t4_1_1_n, settings.t4_1_1_s, settings.t4_1_1_p, settings.t4_2_1_n, settings.t4_2_1_s, settings.t4_2_1_p, settings.t4_3_1_n, settings.t4_3_1_s, settings.t4_3_1_p, settings.t4_4_1_n, settings.t4_4_1_s, settings.t4_4_1_p,
+                     settings.t4_0_2_n, settings.t4_0_2_s, settings.t4_0_2_p, settings.t4_1_2_n, settings.t4_1_2_s, settings.t4_1_2_p, settings.t4_2_2_n, settings.t4_2_2_s, settings.t4_2_2_p, settings.t4_3_2_n, settings.t4_3_2_s, settings.t4_3_2_p, settings.t4_4_2_n, settings.t4_4_2_s, settings.t4_4_2_p,
+                     settings.t4_0_3_n, settings.t4_0_3_s, settings.t4_0_3_p, settings.t4_1_3_n, settings.t4_1_3_s, settings.t4_1_3_p, settings.t4_2_3_n, settings.t4_2_3_s, settings.t4_2_3_p, settings.t4_3_3_n, settings.t4_3_3_s, settings.t4_3_3_p, settings.t4_4_3_n, settings.t4_4_3_s, settings.t4_4_3_p,
+                     settings.t4_0_4_n, settings.t4_0_4_s, settings.t4_0_4_p, settings.t4_1_4_n, settings.t4_1_4_s, settings.t4_1_4_p, settings.t4_2_4_n, settings.t4_2_4_s, settings.t4_2_4_p, settings.t4_3_4_n, settings.t4_3_4_s, settings.t4_3_4_p, settings.t4_4_4_n, settings.t4_4_4_s, settings.t4_4_4_p)
 
     def main_tab_5(self):
         main_tab_5 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_5, text = settings.main_tab_5_n)
-
-        ttk.Button(main_tab_5, text = settings.t5_0_0_n, state = settings.t5_0_0_s, command = lambda: self.confirm(settings.t5_0_0_n, settings.t5_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_1_0_n, state = settings.t5_1_0_s, command = lambda: self.confirm(settings.t5_1_0_n, settings.t5_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_2_0_n, state = settings.t5_2_0_s, command = lambda: self.confirm(settings.t5_2_0_n, settings.t5_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_3_0_n, state = settings.t5_3_0_s, command = lambda: self.confirm(settings.t5_3_0_n, settings.t5_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_4_0_n, state = settings.t5_4_0_s, command = lambda: self.confirm(settings.t5_4_0_n, settings.t5_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_5, text = settings.t5_0_1_n, state = settings.t5_0_1_s, command = lambda: self.confirm(settings.t5_0_1_n, settings.t5_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_1_1_n, state = settings.t5_1_1_s, command = lambda: self.confirm(settings.t5_1_1_n, settings.t5_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_2_1_n, state = settings.t5_2_1_s, command = lambda: self.confirm(settings.t5_2_1_n, settings.t5_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_3_1_n, state = settings.t5_3_1_s, command = lambda: self.confirm(settings.t5_3_1_n, settings.t5_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_4_1_n, state = settings.t5_4_1_s, command = lambda: self.confirm(settings.t5_4_1_n, settings.t5_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_5, text = settings.t5_0_2_n, state = settings.t5_0_2_s, command = lambda: self.confirm(settings.t5_0_2_n, settings.t5_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_1_2_n, state = settings.t5_1_2_s, command = lambda: self.confirm(settings.t5_1_2_n, settings.t5_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_2_2_n, state = settings.t5_2_2_s, command = lambda: self.confirm(settings.t5_2_2_n, settings.t5_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_3_2_n, state = settings.t5_3_2_s, command = lambda: self.confirm(settings.t5_3_2_n, settings.t5_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_4_2_n, state = settings.t5_4_2_s, command = lambda: self.confirm(settings.t5_4_2_n, settings.t5_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_5, text = settings.t5_0_3_n, state = settings.t5_0_3_s, command = lambda: self.confirm(settings.t5_0_3_n, settings.t5_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_1_3_n, state = settings.t5_1_3_s, command = lambda: self.confirm(settings.t5_1_3_n, settings.t5_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_2_3_n, state = settings.t5_2_3_s, command = lambda: self.confirm(settings.t5_2_3_n, settings.t5_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_3_3_n, state = settings.t5_3_3_s, command = lambda: self.confirm(settings.t5_3_3_n, settings.t5_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_4_3_n, state = settings.t5_4_3_s, command = lambda: self.confirm(settings.t5_4_3_n, settings.t5_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_5, text = settings.t5_0_4_n, state = settings.t5_0_4_s, command = lambda: self.confirm(settings.t5_0_4_n, settings.t5_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_1_4_n, state = settings.t5_1_4_s, command = lambda: self.confirm(settings.t5_1_4_n, settings.t5_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_2_4_n, state = settings.t5_2_4_s, command = lambda: self.confirm(settings.t5_2_4_n, settings.t5_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_3_4_n, state = settings.t5_3_4_s, command = lambda: self.confirm(settings.t5_3_4_n, settings.t5_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_5, text = settings.t5_4_4_n, state = settings.t5_4_4_s, command = lambda: self.confirm(settings.t5_4_4_n, settings.t5_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_5.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_5.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_5.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_5.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_5.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_5.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_5.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_5.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_5.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_5.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_5,
+                     settings.t5_0_0_n, settings.t5_0_0_s, settings.t5_0_0_p, settings.t5_1_0_n, settings.t5_1_0_s, settings.t5_1_0_p, settings.t5_2_0_n, settings.t5_2_0_s, settings.t5_2_0_p, settings.t5_3_0_n, settings.t5_3_0_s, settings.t5_3_0_p, settings.t5_4_0_n, settings.t5_4_0_s, settings.t5_4_0_p,
+                     settings.t5_0_1_n, settings.t5_0_1_s, settings.t5_0_1_p, settings.t5_1_1_n, settings.t5_1_1_s, settings.t5_1_1_p, settings.t5_2_1_n, settings.t5_2_1_s, settings.t5_2_1_p, settings.t5_3_1_n, settings.t5_3_1_s, settings.t5_3_1_p, settings.t5_4_1_n, settings.t5_4_1_s, settings.t5_4_1_p,
+                     settings.t5_0_2_n, settings.t5_0_2_s, settings.t5_0_2_p, settings.t5_1_2_n, settings.t5_1_2_s, settings.t5_1_2_p, settings.t5_2_2_n, settings.t5_2_2_s, settings.t5_2_2_p, settings.t5_3_2_n, settings.t5_3_2_s, settings.t5_3_2_p, settings.t5_4_2_n, settings.t5_4_2_s, settings.t5_4_2_p,
+                     settings.t5_0_3_n, settings.t5_0_3_s, settings.t5_0_3_p, settings.t5_1_3_n, settings.t5_1_3_s, settings.t5_1_3_p, settings.t5_2_3_n, settings.t5_2_3_s, settings.t5_2_3_p, settings.t5_3_3_n, settings.t5_3_3_s, settings.t5_3_3_p, settings.t5_4_3_n, settings.t5_4_3_s, settings.t5_4_3_p,
+                     settings.t5_0_4_n, settings.t5_0_4_s, settings.t5_0_4_p, settings.t5_1_4_n, settings.t5_1_4_s, settings.t5_1_4_p, settings.t5_2_4_n, settings.t5_2_4_s, settings.t5_2_4_p, settings.t5_3_4_n, settings.t5_3_4_s, settings.t5_3_4_p, settings.t5_4_4_n, settings.t5_4_4_s, settings.t5_4_4_p)
 
     def main_tab_6(self):
         main_tab_6 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_6, text = settings.main_tab_6_n)
-
-        ttk.Button(main_tab_6, text = settings.t6_0_0_n, state = settings.t6_0_0_s, command = lambda: self.confirm(settings.t6_0_0_n, settings.t6_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_1_0_n, state = settings.t6_1_0_s, command = lambda: self.confirm(settings.t6_1_0_n, settings.t6_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_2_0_n, state = settings.t6_2_0_s, command = lambda: self.confirm(settings.t6_2_0_n, settings.t6_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_3_0_n, state = settings.t6_3_0_s, command = lambda: self.confirm(settings.t6_3_0_n, settings.t6_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_4_0_n, state = settings.t6_4_0_s, command = lambda: self.confirm(settings.t6_4_0_n, settings.t6_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_6, text = settings.t6_0_1_n, state = settings.t6_0_1_s, command = lambda: self.confirm(settings.t6_0_1_n, settings.t6_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_1_1_n, state = settings.t6_1_1_s, command = lambda: self.confirm(settings.t6_1_1_n, settings.t6_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_2_1_n, state = settings.t6_2_1_s, command = lambda: self.confirm(settings.t6_2_1_n, settings.t6_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_3_1_n, state = settings.t6_3_1_s, command = lambda: self.confirm(settings.t6_3_1_n, settings.t6_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_4_1_n, state = settings.t6_4_1_s, command = lambda: self.confirm(settings.t6_4_1_n, settings.t6_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_6, text = settings.t6_0_2_n, state = settings.t6_0_2_s, command = lambda: self.confirm(settings.t6_0_2_n, settings.t6_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_1_2_n, state = settings.t6_1_2_s, command = lambda: self.confirm(settings.t6_1_2_n, settings.t6_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_2_2_n, state = settings.t6_2_2_s, command = lambda: self.confirm(settings.t6_2_2_n, settings.t6_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_3_2_n, state = settings.t6_3_2_s, command = lambda: self.confirm(settings.t6_3_2_n, settings.t6_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_4_2_n, state = settings.t6_4_2_s, command = lambda: self.confirm(settings.t6_4_2_n, settings.t6_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_6, text = settings.t6_0_3_n, state = settings.t6_0_3_s, command = lambda: self.confirm(settings.t6_0_3_n, settings.t6_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_1_3_n, state = settings.t6_1_3_s, command = lambda: self.confirm(settings.t6_1_3_n, settings.t6_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_2_3_n, state = settings.t6_2_3_s, command = lambda: self.confirm(settings.t6_2_3_n, settings.t6_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_3_3_n, state = settings.t6_3_3_s, command = lambda: self.confirm(settings.t6_3_3_n, settings.t6_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_4_3_n, state = settings.t6_4_3_s, command = lambda: self.confirm(settings.t6_4_3_n, settings.t6_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_6, text = settings.t6_0_4_n, state = settings.t6_0_4_s, command = lambda: self.confirm(settings.t6_0_4_n, settings.t6_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_1_4_n, state = settings.t6_1_4_s, command = lambda: self.confirm(settings.t6_1_4_n, settings.t6_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_2_4_n, state = settings.t6_2_4_s, command = lambda: self.confirm(settings.t6_2_4_n, settings.t6_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_3_4_n, state = settings.t6_3_4_s, command = lambda: self.confirm(settings.t6_3_4_n, settings.t6_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_6, text = settings.t6_4_4_n, state = settings.t6_4_4_s, command = lambda: self.confirm(settings.t6_4_4_n, settings.t6_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_6.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_6.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_6.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_6.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_6.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_6.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_6.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_6.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_6.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_6.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_6,
+                     settings.t6_0_0_n, settings.t6_0_0_s, settings.t6_0_0_p, settings.t6_1_0_n, settings.t6_1_0_s, settings.t6_1_0_p, settings.t6_2_0_n, settings.t6_2_0_s, settings.t6_2_0_p, settings.t6_3_0_n, settings.t6_3_0_s, settings.t6_3_0_p, settings.t6_4_0_n, settings.t6_4_0_s, settings.t6_4_0_p,
+                     settings.t6_0_1_n, settings.t6_0_1_s, settings.t6_0_1_p, settings.t6_1_1_n, settings.t6_1_1_s, settings.t6_1_1_p, settings.t6_2_1_n, settings.t6_2_1_s, settings.t6_2_1_p, settings.t6_3_1_n, settings.t6_3_1_s, settings.t6_3_1_p, settings.t6_4_1_n, settings.t6_4_1_s, settings.t6_4_1_p,
+                     settings.t6_0_2_n, settings.t6_0_2_s, settings.t6_0_2_p, settings.t6_1_2_n, settings.t6_1_2_s, settings.t6_1_2_p, settings.t6_2_2_n, settings.t6_2_2_s, settings.t6_2_2_p, settings.t6_3_2_n, settings.t6_3_2_s, settings.t6_3_2_p, settings.t6_4_2_n, settings.t6_4_2_s, settings.t6_4_2_p,
+                     settings.t6_0_3_n, settings.t6_0_3_s, settings.t6_0_3_p, settings.t6_1_3_n, settings.t6_1_3_s, settings.t6_1_3_p, settings.t6_2_3_n, settings.t6_2_3_s, settings.t6_2_3_p, settings.t6_3_3_n, settings.t6_3_3_s, settings.t6_3_3_p, settings.t6_4_3_n, settings.t6_4_3_s, settings.t6_4_3_p,
+                     settings.t6_0_4_n, settings.t6_0_4_s, settings.t6_0_4_p, settings.t6_1_4_n, settings.t6_1_4_s, settings.t6_1_4_p, settings.t6_2_4_n, settings.t6_2_4_s, settings.t6_2_4_p, settings.t6_3_4_n, settings.t6_3_4_s, settings.t6_3_4_p, settings.t6_4_4_n, settings.t6_4_4_s, settings.t6_4_4_p)
 
     def main_tab_7(self):
         main_tab_7 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_7, text = settings.main_tab_7_n)
-
-        ttk.Button(main_tab_7, text = settings.t7_0_0_n, state = settings.t7_0_0_s, command = lambda: self.confirm(settings.t7_0_0_n, settings.t7_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_1_0_n, state = settings.t7_1_0_s, command = lambda: self.confirm(settings.t7_1_0_n, settings.t7_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_2_0_n, state = settings.t7_2_0_s, command = lambda: self.confirm(settings.t7_2_0_n, settings.t7_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_3_0_n, state = settings.t7_3_0_s, command = lambda: self.confirm(settings.t7_3_0_n, settings.t7_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_4_0_n, state = settings.t7_4_0_s, command = lambda: self.confirm(settings.t7_4_0_n, settings.t7_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_7, text = settings.t7_0_1_n, state = settings.t7_0_1_s, command = lambda: self.confirm(settings.t7_0_1_n, settings.t7_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_1_1_n, state = settings.t7_1_1_s, command = lambda: self.confirm(settings.t7_1_1_n, settings.t7_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_2_1_n, state = settings.t7_2_1_s, command = lambda: self.confirm(settings.t7_2_1_n, settings.t7_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_3_1_n, state = settings.t7_3_1_s, command = lambda: self.confirm(settings.t7_3_1_n, settings.t7_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_4_1_n, state = settings.t7_4_1_s, command = lambda: self.confirm(settings.t7_4_1_n, settings.t7_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_7, text = settings.t7_0_2_n, state = settings.t7_0_2_s, command = lambda: self.confirm(settings.t7_0_2_n, settings.t7_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_1_2_n, state = settings.t7_1_2_s, command = lambda: self.confirm(settings.t7_1_2_n, settings.t7_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_2_2_n, state = settings.t7_2_2_s, command = lambda: self.confirm(settings.t7_2_2_n, settings.t7_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_3_2_n, state = settings.t7_3_2_s, command = lambda: self.confirm(settings.t7_3_2_n, settings.t7_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_4_2_n, state = settings.t7_4_2_s, command = lambda: self.confirm(settings.t7_4_2_n, settings.t7_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_7, text = settings.t7_0_3_n, state = settings.t7_0_3_s, command = lambda: self.confirm(settings.t7_0_3_n, settings.t7_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_1_3_n, state = settings.t7_1_3_s, command = lambda: self.confirm(settings.t7_1_3_n, settings.t7_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_2_3_n, state = settings.t7_2_3_s, command = lambda: self.confirm(settings.t7_2_3_n, settings.t7_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_3_3_n, state = settings.t7_3_3_s, command = lambda: self.confirm(settings.t7_3_3_n, settings.t7_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_4_3_n, state = settings.t7_4_3_s, command = lambda: self.confirm(settings.t7_4_3_n, settings.t7_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_7, text = settings.t7_0_4_n, state = settings.t7_0_4_s, command = lambda: self.confirm(settings.t7_0_4_n, settings.t7_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_1_4_n, state = settings.t7_1_4_s, command = lambda: self.confirm(settings.t7_1_4_n, settings.t7_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_2_4_n, state = settings.t7_2_4_s, command = lambda: self.confirm(settings.t7_2_4_n, settings.t7_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_3_4_n, state = settings.t7_3_4_s, command = lambda: self.confirm(settings.t7_3_4_n, settings.t7_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_7, text = settings.t7_4_4_n, state = settings.t7_4_4_s, command = lambda: self.confirm(settings.t7_4_4_n, settings.t7_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_7.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_7.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_7.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_7.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_7.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_7.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_7.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_7.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_7.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_7.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_7,
+                     settings.t7_0_0_n, settings.t7_0_0_s, settings.t7_0_0_p, settings.t7_1_0_n, settings.t7_1_0_s, settings.t7_1_0_p, settings.t7_2_0_n, settings.t7_2_0_s, settings.t7_2_0_p, settings.t7_3_0_n, settings.t7_3_0_s, settings.t7_3_0_p, settings.t7_4_0_n, settings.t7_4_0_s, settings.t7_4_0_p,
+                     settings.t7_0_1_n, settings.t7_0_1_s, settings.t7_0_1_p, settings.t7_1_1_n, settings.t7_1_1_s, settings.t7_1_1_p, settings.t7_2_1_n, settings.t7_2_1_s, settings.t7_2_1_p, settings.t7_3_1_n, settings.t7_3_1_s, settings.t7_3_1_p, settings.t7_4_1_n, settings.t7_4_1_s, settings.t7_4_1_p,
+                     settings.t7_0_2_n, settings.t7_0_2_s, settings.t7_0_2_p, settings.t7_1_2_n, settings.t7_1_2_s, settings.t7_1_2_p, settings.t7_2_2_n, settings.t7_2_2_s, settings.t7_2_2_p, settings.t7_3_2_n, settings.t7_3_2_s, settings.t7_3_2_p, settings.t7_4_2_n, settings.t7_4_2_s, settings.t7_4_2_p,
+                     settings.t7_0_3_n, settings.t7_0_3_s, settings.t7_0_3_p, settings.t7_1_3_n, settings.t7_1_3_s, settings.t7_1_3_p, settings.t7_2_3_n, settings.t7_2_3_s, settings.t7_2_3_p, settings.t7_3_3_n, settings.t7_3_3_s, settings.t7_3_3_p, settings.t7_4_3_n, settings.t7_4_3_s, settings.t7_4_3_p,
+                     settings.t7_0_4_n, settings.t7_0_4_s, settings.t7_0_4_p, settings.t7_1_4_n, settings.t7_1_4_s, settings.t7_1_4_p, settings.t7_2_4_n, settings.t7_2_4_s, settings.t7_2_4_p, settings.t7_3_4_n, settings.t7_3_4_s, settings.t7_3_4_p, settings.t7_4_4_n, settings.t7_4_4_s, settings.t7_4_4_p)
 
     def main_tab_8(self):
         main_tab_8 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_8, text = settings.main_tab_8_n)
-
-        ttk.Button(main_tab_8, text = settings.t8_0_0_n, state = settings.t8_0_0_s, command = lambda: self.confirm(settings.t8_0_0_n, settings.t8_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_1_0_n, state = settings.t8_1_0_s, command = lambda: self.confirm(settings.t8_1_0_n, settings.t8_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_2_0_n, state = settings.t8_2_0_s, command = lambda: self.confirm(settings.t8_2_0_n, settings.t8_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_3_0_n, state = settings.t8_3_0_s, command = lambda: self.confirm(settings.t8_3_0_n, settings.t8_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_4_0_n, state = settings.t8_4_0_s, command = lambda: self.confirm(settings.t8_4_0_n, settings.t8_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_8, text = settings.t8_0_1_n, state = settings.t8_0_1_s, command = lambda: self.confirm(settings.t8_0_1_n, settings.t8_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_1_1_n, state = settings.t8_1_1_s, command = lambda: self.confirm(settings.t8_1_1_n, settings.t8_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_2_1_n, state = settings.t8_2_1_s, command = lambda: self.confirm(settings.t8_2_1_n, settings.t8_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_3_1_n, state = settings.t8_3_1_s, command = lambda: self.confirm(settings.t8_3_1_n, settings.t8_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_4_1_n, state = settings.t8_4_1_s, command = lambda: self.confirm(settings.t8_4_1_n, settings.t8_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_8, text = settings.t8_0_2_n, state = settings.t8_0_2_s, command = lambda: self.confirm(settings.t8_0_2_n, settings.t8_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_1_2_n, state = settings.t8_1_2_s, command = lambda: self.confirm(settings.t8_1_2_n, settings.t8_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_2_2_n, state = settings.t8_2_2_s, command = lambda: self.confirm(settings.t8_2_2_n, settings.t8_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_3_2_n, state = settings.t8_3_2_s, command = lambda: self.confirm(settings.t8_3_2_n, settings.t8_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_4_2_n, state = settings.t8_4_2_s, command = lambda: self.confirm(settings.t8_4_2_n, settings.t8_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_8, text = settings.t8_0_3_n, state = settings.t8_0_3_s, command = lambda: self.confirm(settings.t8_0_3_n, settings.t8_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_1_3_n, state = settings.t8_1_3_s, command = lambda: self.confirm(settings.t8_1_3_n, settings.t8_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_2_3_n, state = settings.t8_2_3_s, command = lambda: self.confirm(settings.t8_2_3_n, settings.t8_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_3_3_n, state = settings.t8_3_3_s, command = lambda: self.confirm(settings.t8_3_3_n, settings.t8_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_4_3_n, state = settings.t8_4_3_s, command = lambda: self.confirm(settings.t8_4_3_n, settings.t8_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_8, text = settings.t8_0_4_n, state = settings.t8_0_4_s, command = lambda: self.confirm(settings.t8_0_4_n, settings.t8_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_1_4_n, state = settings.t8_1_4_s, command = lambda: self.confirm(settings.t8_1_4_n, settings.t8_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_2_4_n, state = settings.t8_2_4_s, command = lambda: self.confirm(settings.t8_2_4_n, settings.t8_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_3_4_n, state = settings.t8_3_4_s, command = lambda: self.confirm(settings.t8_3_4_n, settings.t8_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_8, text = settings.t8_4_4_n, state = settings.t8_4_4_s, command = lambda: self.confirm(settings.t8_4_4_n, settings.t8_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_8.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_8.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_8.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_8.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_8.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_8.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_8.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_8.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_8.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_8.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_8,
+                     settings.t8_0_0_n, settings.t8_0_0_s, settings.t8_0_0_p, settings.t8_1_0_n, settings.t8_1_0_s, settings.t8_1_0_p, settings.t8_2_0_n, settings.t8_2_0_s, settings.t8_2_0_p, settings.t8_3_0_n, settings.t8_3_0_s, settings.t8_3_0_p, settings.t8_4_0_n, settings.t8_4_0_s, settings.t8_4_0_p,
+                     settings.t8_0_1_n, settings.t8_0_1_s, settings.t8_0_1_p, settings.t8_1_1_n, settings.t8_1_1_s, settings.t8_1_1_p, settings.t8_2_1_n, settings.t8_2_1_s, settings.t8_2_1_p, settings.t8_3_1_n, settings.t8_3_1_s, settings.t8_3_1_p, settings.t8_4_1_n, settings.t8_4_1_s, settings.t8_4_1_p,
+                     settings.t8_0_2_n, settings.t8_0_2_s, settings.t8_0_2_p, settings.t8_1_2_n, settings.t8_1_2_s, settings.t8_1_2_p, settings.t8_2_2_n, settings.t8_2_2_s, settings.t8_2_2_p, settings.t8_3_2_n, settings.t8_3_2_s, settings.t8_3_2_p, settings.t8_4_2_n, settings.t8_4_2_s, settings.t8_4_2_p,
+                     settings.t8_0_3_n, settings.t8_0_3_s, settings.t8_0_3_p, settings.t8_1_3_n, settings.t8_1_3_s, settings.t8_1_3_p, settings.t8_2_3_n, settings.t8_2_3_s, settings.t8_2_3_p, settings.t8_3_3_n, settings.t8_3_3_s, settings.t8_3_3_p, settings.t8_4_3_n, settings.t8_4_3_s, settings.t8_4_3_p,
+                     settings.t8_0_4_n, settings.t8_0_4_s, settings.t8_0_4_p, settings.t8_1_4_n, settings.t8_1_4_s, settings.t8_1_4_p, settings.t8_2_4_n, settings.t8_2_4_s, settings.t8_2_4_p, settings.t8_3_4_n, settings.t8_3_4_s, settings.t8_3_4_p, settings.t8_4_4_n, settings.t8_4_4_s, settings.t8_4_4_p)
 
     def main_tab_9(self):
         main_tab_9 = ttk.Frame(self.main, padding = 5, style = "TFrame")
         self.main.add(main_tab_9, text = settings.main_tab_9_n)
-
-        ttk.Button(main_tab_9, text = settings.t9_0_0_n, state = settings.t9_0_0_s, command = lambda: self.confirm(settings.t9_0_0_n, settings.t9_0_0_p), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_1_0_n, state = settings.t9_1_0_s, command = lambda: self.confirm(settings.t9_1_0_n, settings.t9_1_0_p), style = "TButton").grid(row = 0, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_2_0_n, state = settings.t9_2_0_s, command = lambda: self.confirm(settings.t9_2_0_n, settings.t9_2_0_p), style = "TButton").grid(row = 0, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_3_0_n, state = settings.t9_3_0_s, command = lambda: self.confirm(settings.t9_3_0_n, settings.t9_3_0_p), style = "TButton").grid(row = 0, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_4_0_n, state = settings.t9_4_0_s, command = lambda: self.confirm(settings.t9_4_0_n, settings.t9_4_0_p), style = "TButton").grid(row = 0, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_9, text = settings.t9_0_1_n, state = settings.t9_0_1_s, command = lambda: self.confirm(settings.t9_0_1_n, settings.t9_0_1_p), style = "TButton").grid(row = 1, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_1_1_n, state = settings.t9_1_1_s, command = lambda: self.confirm(settings.t9_1_1_n, settings.t9_1_1_p), style = "TButton").grid(row = 1, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_2_1_n, state = settings.t9_2_1_s, command = lambda: self.confirm(settings.t9_2_1_n, settings.t9_2_1_p), style = "TButton").grid(row = 1, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_3_1_n, state = settings.t9_3_1_s, command = lambda: self.confirm(settings.t9_3_1_n, settings.t9_3_1_p), style = "TButton").grid(row = 1, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_4_1_n, state = settings.t9_4_1_s, command = lambda: self.confirm(settings.t9_4_1_n, settings.t9_4_1_p), style = "TButton").grid(row = 1, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_9, text = settings.t9_0_2_n, state = settings.t9_0_2_s, command = lambda: self.confirm(settings.t9_0_2_n, settings.t9_0_2_p), style = "TButton").grid(row = 2, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_1_2_n, state = settings.t9_1_2_s, command = lambda: self.confirm(settings.t9_1_2_n, settings.t9_1_2_p), style = "TButton").grid(row = 2, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_2_2_n, state = settings.t9_2_2_s, command = lambda: self.confirm(settings.t9_2_2_n, settings.t9_2_2_p), style = "TButton").grid(row = 2, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_3_2_n, state = settings.t9_3_2_s, command = lambda: self.confirm(settings.t9_3_2_n, settings.t9_3_2_p), style = "TButton").grid(row = 2, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_4_2_n, state = settings.t9_4_2_s, command = lambda: self.confirm(settings.t9_4_2_n, settings.t9_4_2_p), style = "TButton").grid(row = 2, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_9, text = settings.t9_0_3_n, state = settings.t9_0_3_s, command = lambda: self.confirm(settings.t9_0_3_n, settings.t9_0_3_p), style = "TButton").grid(row = 3, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_1_3_n, state = settings.t9_1_3_s, command = lambda: self.confirm(settings.t9_1_3_n, settings.t9_1_3_p), style = "TButton").grid(row = 3, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_2_3_n, state = settings.t9_2_3_s, command = lambda: self.confirm(settings.t9_2_3_n, settings.t9_2_3_p), style = "TButton").grid(row = 3, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_3_3_n, state = settings.t9_3_3_s, command = lambda: self.confirm(settings.t9_3_3_n, settings.t9_3_3_p), style = "TButton").grid(row = 3, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_4_3_n, state = settings.t9_4_3_s, command = lambda: self.confirm(settings.t9_4_3_n, settings.t9_4_3_p), style = "TButton").grid(row = 3, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        ttk.Button(main_tab_9, text = settings.t9_0_4_n, state = settings.t9_0_4_s, command = lambda: self.confirm(settings.t9_0_4_n, settings.t9_0_4_p), style = "TButton").grid(row = 4, column = 0, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_1_4_n, state = settings.t9_1_4_s, command = lambda: self.confirm(settings.t9_1_4_n, settings.t9_1_4_p), style = "TButton").grid(row = 4, column = 1, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_2_4_n, state = settings.t9_2_4_s, command = lambda: self.confirm(settings.t9_2_4_n, settings.t9_2_4_p), style = "TButton").grid(row = 4, column = 2, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_3_4_n, state = settings.t9_3_4_s, command = lambda: self.confirm(settings.t9_3_4_n, settings.t9_3_4_p), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
-        ttk.Button(main_tab_9, text = settings.t9_4_4_n, state = settings.t9_4_4_s, command = lambda: self.confirm(settings.t9_4_4_n, settings.t9_4_4_p), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
-
-        main_tab_9.grid_rowconfigure(0, minsize = button_height, weight = 1)
-        main_tab_9.grid_rowconfigure(1, minsize = button_height, weight = 1)
-        main_tab_9.grid_rowconfigure(2, minsize = button_height, weight = 1)
-        main_tab_9.grid_rowconfigure(3, minsize = button_height, weight = 1)
-        main_tab_9.grid_rowconfigure(4, minsize = button_height, weight = 1)
-        main_tab_9.grid_columnconfigure(0, minsize = button_width, weight = 1)
-        main_tab_9.grid_columnconfigure(1, minsize = button_width, weight = 1)
-        main_tab_9.grid_columnconfigure(2, minsize = button_width, weight = 1)
-        main_tab_9.grid_columnconfigure(3, minsize = button_width, weight = 1)
-        main_tab_9.grid_columnconfigure(4, minsize = button_width, weight = 1)
+        self.buttons(main_tab_9,
+                     settings.t9_0_0_n, settings.t9_0_0_s, settings.t9_0_0_p, settings.t9_1_0_n, settings.t9_1_0_s, settings.t9_1_0_p, settings.t9_2_0_n, settings.t9_2_0_s, settings.t9_2_0_p, settings.t9_3_0_n, settings.t9_3_0_s, settings.t9_3_0_p, settings.t9_4_0_n, settings.t9_4_0_s, settings.t9_4_0_p,
+                     settings.t9_0_1_n, settings.t9_0_1_s, settings.t9_0_1_p, settings.t9_1_1_n, settings.t9_1_1_s, settings.t9_1_1_p, settings.t9_2_1_n, settings.t9_2_1_s, settings.t9_2_1_p, settings.t9_3_1_n, settings.t9_3_1_s, settings.t9_3_1_p, settings.t9_4_1_n, settings.t9_4_1_s, settings.t9_4_1_p,
+                     settings.t9_0_2_n, settings.t9_0_2_s, settings.t9_0_2_p, settings.t9_1_2_n, settings.t9_1_2_s, settings.t9_1_2_p, settings.t9_2_2_n, settings.t9_2_2_s, settings.t9_2_2_p, settings.t9_3_2_n, settings.t9_3_2_s, settings.t9_3_2_p, settings.t9_4_2_n, settings.t9_4_2_s, settings.t9_4_2_p,
+                     settings.t9_0_3_n, settings.t9_0_3_s, settings.t9_0_3_p, settings.t9_1_3_n, settings.t9_1_3_s, settings.t9_1_3_p, settings.t9_2_3_n, settings.t9_2_3_s, settings.t9_2_3_p, settings.t9_3_3_n, settings.t9_3_3_s, settings.t9_3_3_p, settings.t9_4_3_n, settings.t9_4_3_s, settings.t9_4_3_p,
+                     settings.t9_0_4_n, settings.t9_0_4_s, settings.t9_0_4_p, settings.t9_1_4_n, settings.t9_1_4_s, settings.t9_1_4_p, settings.t9_2_4_n, settings.t9_2_4_s, settings.t9_2_4_p, settings.t9_3_4_n, settings.t9_3_4_s, settings.t9_3_4_p, settings.t9_4_4_n, settings.t9_4_4_s, settings.t9_4_4_p)
 
     def confirm(self, name, path):
         confirm = tk.Toplevel()
