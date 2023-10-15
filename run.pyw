@@ -36,9 +36,8 @@ class Main():
         style.theme_use("clam")
         style.configure("TFrame", background = "white")
         style.configure("TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
-        style.configure("startup_ver.TLabel", font = ("Yu Gothic UI", 25, "bold"), anchor = "center", background = "white")
+        style.configure("bold.TLabel", font = ("Yu Gothic UI", 25, "bold"), anchor = "center", background = "white")
         style.configure("logo.TLabel", background = "white")
-        style.configure("notice.TLabel", font = ("Yu Gothic UI", 30, "bold"), anchor = "center", background = "white")
         style.configure("TNotebook", background = "white")
         style.configure("TNotebook.Tab", width = 300, font = ("Yu Gothic UI", 35, "bold"), anchor = "center", background = "whitesmoke")
         style.configure("TButton", font = ("Yu Gothic UI", 25, "bold"), background = "whitesmoke")
@@ -72,7 +71,7 @@ class Main():
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}"
-        ver_label = ttk.Label(startup_frame, text = ver, style = "startup_ver.TLabel")
+        ver_label = ttk.Label(startup_frame, text = ver, style = "bold.TLabel")
         ver_label.place(x = 0, y = 100, width = 300 + 20, height = 150 - 100)
 
         text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます\n(C) 2023 cyber-yuito723\n終了：「Ctrl」キー＋「Q」キー"
@@ -93,7 +92,7 @@ class Main():
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = "呼びたい先生のボタンを押してください"
-        text_label = ttk.Label(header, text = text, style = "notice.TLabel")
+        text_label = ttk.Label(header, text = text, style = "bold.TLabel")
         text_label.place(x = 10 + 300 + 10 + 300, y = 0, width = screen_width - 10 - 300 - 10 - 300, height = 100)
 
     def main(self):
@@ -278,16 +277,16 @@ class Main():
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = f"{name}を呼びますか？"
-        text_label = ttk.Label(confirm, text = text, style = "notice.TLabel")
-        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2), width = (button_width * 2) + 10, height = 50 + 10)
+        text_label = ttk.Label(confirm, text = text, style = "bold.TLabel")
+        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - button_height) / 2), width = (button_width * 2) + 10, height = 50)
 
         text = "はい"
         button = ttk.Button(confirm, text = text, command = lambda: self.playsound(confirm, name, path), style = "TButton")
-        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2) + 50 + 10, width = button_width, height = button_height)
+        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
 
         text = "いいえ"
         button = ttk.Button(confirm, text = text, command = confirm.destroy, style = "TButton")
-        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2) + 50 + 10, width = button_width, height = button_height)
+        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
 
     def playsound(self, confirm, name, path):
         playsound = tk.Toplevel()
@@ -309,7 +308,7 @@ class Main():
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = f"{name}を呼んでいます"
-        text_label = ttk.Label(playsound, text = text, style = "notice.TLabel")
+        text_label = ttk.Label(playsound, text = text, style = "bold.TLabel")
         text_label.place(x = 0, y = 100, width = screen_width, height = screen_height - 100)
 
         for i in range(2):
@@ -340,16 +339,16 @@ class Main():
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = "TeaChimerを終了しますか？"
-        text_label = ttk.Label(exit, text = text, style = "notice.TLabel")
-        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2), width = (button_width * 2) + 10, height = 50 + 10)
+        text_label = ttk.Label(exit, text = text, style = "bold.TLabel")
+        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - button_height) / 2), width = (button_width * 2) + 10, height = 50)
 
         text = "はい"
         button = ttk.Button(exit, text = text, command = self.master.destroy, style = "TButton")
-        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2) + 50 + 10, width = button_width, height = button_height)
+        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
 
         text = "いいえ"
         button = ttk.Button(exit, text = text, command = exit.destroy, style = "TButton")
-        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2) + 50 + 10, width = button_width, height = button_height)
+        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
 
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
