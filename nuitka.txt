@@ -1,0 +1,1 @@
+nuitka --assume-yes-for-downloads --mingw64 --follow-imports --enable-plugin=tk-inter --nofollow-import-to=settings --onefile --windows-disable-console --windows-icon-from-ico="./system/logo-1_icon.ico" run.pyw
