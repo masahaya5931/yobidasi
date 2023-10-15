@@ -17,6 +17,9 @@ You should have received a copy of the GNU General Public License along with Tea
 If not, see <https://www.gnu.org/licenses/>.
 """
 
+import sys
+sys.dont_write_bytecode = True
+
 import tkinter as tk
 import tkinter.ttk as ttk
 import winsound
