@@ -1,5 +1,5 @@
 """
-TeaChimer-v1.0.0
+TeaChimer-v1.1.0
 (C) 2023 cyber-yuito723
 
 
@@ -37,13 +37,14 @@ class Main():
 
         style = ttk.Style()
         style.theme_use("clam")
-        style.configure("TFrame", background = "white")
+        style.configure("TFrame", background = "green")###############################################################################white
         style.configure("TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
         style.configure("bold.TLabel", font = ("Yu Gothic UI", 25, "bold"), anchor = "center", background = "white")
         style.configure("logo.TLabel", background = "white")
         style.configure("TNotebook", background = "white")
         style.configure("TNotebook.Tab", width = 300, font = ("Yu Gothic UI", 35, "bold"), anchor = "center", background = "whitesmoke")
         style.configure("TButton", font = ("Yu Gothic UI", 25, "bold"), background = "whitesmoke")
+        style.configure("TSeparator", background = "white")
         style.map("TNotebook.Tab", background = [("selected", "white")])
         style.map("TButton", background = [("active", "whitesmoke"), ("disabled", "lightgray")])
 
@@ -52,6 +53,7 @@ class Main():
         self.header()
         self.main()
 
+        self.master.bind("<Control-h>", self.help)
         self.master.bind("<Control-q>", self.exit)
 
     def startup(self):
@@ -322,6 +324,86 @@ class Main():
         confirm.destroy()
         playsound.destroy()
 
+    def help(self, event):
+        help = tk.Toplevel()
+        help.overrideredirect(True)
+        help.attributes("-topmost", True)
+        help.iconbitmap("./system/logo-1_icon.ico")
+        help.title(f"TeaChimer-{version}_HELP")
+        help.geometry(f"{screen_width}x{screen_height}")
+        help.configure(background = "white")
+        help.focus_force()
+
+        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
+        logo_label = ttk.Label(help, image = logo, style = "logo.TLabel")
+        logo_label.place(x = 10, y = 0, width = 300, height = 100)
+        logo_label.image = logo
+
+        ver = f"TeaChimer-{version}\n{settings.school_name}\n{settings.admin_name}"
+        ver_label = ttk.Label(help, text = ver, style = "TLabel")
+        ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
+
+        text = "ヘルプ画面の終了"
+        button = ttk.Button(help, text = text, command = help.destroy, style = "TButton")
+        button.place(x = screen_width - button_width - 10, y = 10, width = button_width, height = 100 - 10 * 2)
+
+        help_tab = ttk.Notebook(help, style = "TNotebook")
+        help_tab.place(x = 0, y = 100, width = screen_width, height = screen_height - 100)
+
+        self.help_tab_0(help_tab)
+        self.help_tab_1(help_tab)
+        self.help_tab_2(help_tab)
+
+    def help_tab_0(self, help_tab):
+        help_tab_0 = ttk.Frame(help_tab, style = "TFrame")
+        help_tab.add(help_tab_0, text = "全般")
+
+    def help_tab_1(self, help_tab):
+        help_tab_1 = ttk.Frame(help_tab, style = "TFrame")
+        help_tab.add(help_tab_1, text = "設定方法")
+
+    def help_tab_2(self, help_tab):
+        help_tab_2 = ttk.Frame(help_tab, padding = 0, style = "TFrame")
+        help_tab.add(help_tab_2, text = "ライセンス")
+
+        left_frame = ttk.Frame(help_tab_2, padding = 10, style = "TFrame")
+        left_frame.place(x = 0, y = 0, width = screen_width / 2, height = screen_height - 100 - 75)
+
+        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
+        logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
+        logo_label.place(x = (screen_width / 2 - 10 * 3 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2, width = 300, height = 100)
+        logo_label.image = logo
+
+        logo = tk.PhotoImage(file = "./system/logo-2_beta_small.png")
+        logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
+        logo_label.place(x = (screen_width / 2 - 10 * 3 - 300 * 2) / 2 + 300 + 10, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2, width = 300, height = 100)
+        logo_label.image = logo
+
+        text = f"TeaChimer-{version}"
+        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100, width = screen_width / 2 - 10 * 2, height = 50)
+
+        text = f"version : {version}\nedition : {edition}"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50, width = screen_width / 2 - 10 * 2, height = 100)
+
+        text = "　TeaChimerはオープンソースソフトウェアであり、GNU General Public License v3.0に基づいて\n再配布したり改変したりできます"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50 + 100, width = screen_width / 2 - 10 * 2, height = 100)
+
+        text = "(C) 2023 cyber-yuito723"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50 + 100 + 100, width = screen_width / 2 - 10 * 2, height = 50)
+
+        sep = ttk.Separator(help_tab_2, orient = "vertical", style = "TSeparator")
+        sep.place(x = screen_width / 2, y = 10, width = 0, height = screen_height - 100 - 75 - 10 * 2)
+
+        right_frame = ttk.Frame(help_tab_2, padding = 0, style = "TFrame")
+        right_frame.place(x = screen_width / 2+10, y = 0, width = screen_width / 2, height = screen_height - 100 - 75)
+
+        # l = ttk.Label(help_tab_2, text="", background="blue")
+        # l.place(x = 0, y = 0, width = screen_width, height = screen_height - 100 - 75)
+
     def exit(self, event):
         exit = tk.Toplevel()
         exit.overrideredirect(True)
@@ -358,6 +440,7 @@ screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
-version = "v1.0.0"
+version = "v1.1.0"
+edition = "normal"
 app = Main(root)
 root.mainloop()
