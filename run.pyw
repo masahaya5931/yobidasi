@@ -23,6 +23,7 @@ sys.dont_write_bytecode = True
 import tkinter as tk
 import tkinter.ttk as ttk
 import winsound
+import datetime
 import settings
 
 class Main():
@@ -323,6 +324,11 @@ class Main():
 
         confirm.destroy()
         playsound.destroy()
+
+        date = datetime.date.today().strftime("%Y%m%d")
+        time = datetime.datetime.now().strftime("%Y年%m月%d日%H時%M分%S秒")
+        with open(f"./log/{date}_log.txt", "a", encoding = "utf-8") as f:
+            f.write(f"{time}に{name}が呼ばれました。\n")
 
     def help(self, event):
         help = tk.Toplevel()
