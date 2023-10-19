@@ -408,10 +408,10 @@ class Main():
         # sep.place(x = screen_width / 2, y = 10, width = 10, height = screen_height - 100 - 75 - 10 * 2)
 
         right_frame = ttk.Frame(help_tab_2, padding = 5, style = "TFrame")
-        right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = screen_width / 2, height = screen_height - 100 - 75)
+        right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = screen_width / 2, height = screen_height - 100 - 70 - 10 * 2)
 
         l = ttk.Label(right_frame, text="", background="blue")
-        l.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75)
+        l.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 70 - 10 * 2)
 
     def exit(self, event):
         exit = tk.Toplevel()
