@@ -441,7 +441,7 @@ class Main():
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
-screen_width = 1000
+screen_width = 1500
 screen_height = 600
 if screen_width < 1500 and screen_height < 700:
     exit()
