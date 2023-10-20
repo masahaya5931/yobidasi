@@ -441,9 +441,9 @@ class Main():
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
-screen_width = 1300
-screen_height = 600
-if screen_width < 1500 and screen_height < 700:
+screen_width = 1500
+screen_height = 699
+if screen_width < 1500 or screen_height < 700:
     exit()
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
