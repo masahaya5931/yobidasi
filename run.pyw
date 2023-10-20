@@ -375,46 +375,37 @@ class Main():
         left_frame = ttk.Frame(help_tab_2, style = "TFrame")
         left_frame.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
-        l = ttk.Label(left_frame, text="", background="blue")
-        l.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
+        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
+        logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2, width = 300, height = 100)
+        logo_label.image = logo
 
-        # logo = tk.PhotoImage(file = "./system/logo-2_small.png")
-        # logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
-        # logo_label.place(x = (screen_width / 2 - 10 * 3 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2, width = 300, height = 100)
-        # logo_label.image = logo
+        logo = tk.PhotoImage(file = "./system/logo-2_beta_small.png")
+        logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2 + 300 + 10, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2, width = 300, height = 100)
+        logo_label.image = logo
 
-        # logo = tk.PhotoImage(file = "./system/logo-2_beta_small.png")
-        # logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
-        # logo_label.place(x = (screen_width / 2 - 10 * 3 - 300 * 2) / 2 + 300 + 10, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2, width = 300, height = 100)
-        # logo_label.image = logo
+        text = f"TeaChimer-{version}"
+        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100, width = (screen_width - 10 * 3) / 2, height = 50)
 
-        # text = f"TeaChimer-{version}"
-        # text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
-        # text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100, width = screen_width / 2 - 10 * 2, height = 50)
+        text = f"version : {version}\nedition : {edition}"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50, width = (screen_width - 10 * 3) / 2, height = 100)
 
-        # text = f"version : {version}\nedition : {edition}"
-        # text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        # text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50, width = screen_width / 2 - 10 * 2, height = 100)
+        text = "　TeaChimerはオープンソースソフトウェアであり、GNU General Public License v3.0に\n基づいて再配布したり改変したりできます"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50 + 100, width = (screen_width - 10 * 3) / 2, height = 100)
 
-        # text = "　TeaChimerはオープンソースソフトウェアであり、GNU General Public License v3.0に基づいて\n再配布したり改変したりできます"
-        # text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        # text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50 + 100, width = screen_width / 2 - 10 * 2, height = 100)
+        text = "(C) 2023 cyber-yuito723"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50 + 100 + 100, width = (screen_width - 10 * 3) / 2, height = 50)
 
-        # text = "(C) 2023 cyber-yuito723"
-        # text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        # text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50 + 100 + 100, width = screen_width / 2 - 10 * 2, height = 50)
-
-        # sep = ttk.Separator(help_tab_2, orient = "vertical", style = "TSeparator")
-        # sep.place(x = (screen_width - 10) / 2, y = 5, width = 10, height = screen_height - 100 - 75 - 5 * 4)
+        sep = ttk.Separator(help_tab_2, orient = "vertical", style = "TSeparator")
+        sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
 
         right_frame = ttk.Frame(help_tab_2, style = "TFrame")
         right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
-
-        l = ttk.Label(right_frame, text="", background="blue")
-        l.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
-
-        # l = ttk.Label(right_frame, text="", background="red")
-        # l.place(x = 0, y = 0, width = 10, height = 10)
 
     def exit(self, event):
         exit = tk.Toplevel()
@@ -450,6 +441,10 @@ class Main():
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
+screen_width = 1000
+screen_height = 600
+if screen_width < 1500 and screen_height < 700:
+    exit()
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
 version = "v1.1.0"
