@@ -362,12 +362,30 @@ class Main():
         self.help_tab_2(help_tab)
 
     def help_tab_0(self, help_tab):
-        help_tab_0 = ttk.Frame(help_tab, style = "TFrame")
+        help_tab_0 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
         help_tab.add(help_tab_0, text = "全般")
 
+        left_frame = ttk.Frame(help_tab_0, style = "TFrame")
+        left_frame.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
+
+        sep = ttk.Separator(help_tab_0, orient = "vertical", style = "TSeparator")
+        sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
+
+        right_frame = ttk.Frame(help_tab_0, style = "TFrame")
+        right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
+
     def help_tab_1(self, help_tab):
-        help_tab_1 = ttk.Frame(help_tab, style = "TFrame")
+        help_tab_1 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
         help_tab.add(help_tab_1, text = "設定方法")
+
+        left_frame = ttk.Frame(help_tab_1, style = "TFrame")
+        left_frame.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
+
+        sep = ttk.Separator(help_tab_1, orient = "vertical", style = "TSeparator")
+        sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
+
+        right_frame = ttk.Frame(help_tab_1, style = "TFrame")
+        right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
     def help_tab_2(self, help_tab):
         help_tab_2 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
