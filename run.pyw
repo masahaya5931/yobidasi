@@ -22,6 +22,7 @@ sys.dont_write_bytecode = True
 
 import tkinter as tk
 import tkinter.ttk as ttk
+import tkinter.messagebox as mbox
 import winsound
 import datetime
 import settings
@@ -438,16 +439,15 @@ class Main():
         button = ttk.Button(exit, text = text, command = exit.destroy, style = "TButton")
         button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
 
+# if mbox.showinfo("解像度が足りません", "ディスプレイの解像度は\n1500ピクセルx700ピクセル以上\nないと起動できません"):
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
-screen_width = 1500
-screen_height = 699
-if screen_width < 1500 or screen_height < 700:
-    exit()
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
 version = "v1.1.0"
 edition = "normal"
+if screen_width < 1500 or screen_height < 700:
+    exit()
 app = Main(root)
 root.mainloop()
