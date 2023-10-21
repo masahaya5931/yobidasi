@@ -457,7 +457,7 @@ class Main():
         button = ttk.Button(exit, text = text, command = exit.destroy, style = "TButton")
         button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
 
-# if mbox.showinfo("解像度が足りません", "ディスプレイの解像度は\n1500ピクセルx700ピクセル以上\nないと起動できません"):
+# if mbox.showinfo("解像度が足りません", "ディスプレイの解像度は\n1500ピクセルx700ピクセル以上ないと\n起動できません"):
 #     pass
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
