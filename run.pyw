@@ -39,7 +39,7 @@ class Main():
 
         style = ttk.Style()
         style.theme_use("clam")
-        style.configure("TFrame", background = "green")###############################################################################white
+        style.configure("TFrame", background = "white")
         style.configure("TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
         style.configure("bold.TLabel", font = ("Yu Gothic UI", 25, "bold"), anchor = "center", background = "white")
         style.configure("logo.TLabel", background = "white")
