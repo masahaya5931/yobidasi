@@ -1,20 +1,6 @@
 """
 TeaChimer-v1.1.0
 (C) 2023 cyber-yuito723
-
-
-This file is part of TeaChimer.
-
-TeaChimer is free software: you can redistribute it and/or modify it under the terms of
-the GNU General Public License as published by the Free Software Foundation,
-either version 3 of the License, or (at your option) any later version.
-
-TeaChimer is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with TeaChimer.
-If not, see <https://www.gnu.org/licenses/>.
 """
 
 import sys
@@ -34,12 +20,12 @@ class Main():
         self.master.attributes("-topmost", True)
         self.master.iconbitmap("./system/logo-1_icon.ico")
         self.master.title(f"TeaChimer-{version}_MAIN")
-        self.master.configure(background = "white")
+        self.master.configure(background = "black")
         self.master.focus_force()
 
         style = ttk.Style()
         style.theme_use("clam")
-        style.configure("TFrame", background = "white")
+        style.configure("TFrame", background = "white")##################################################
         style.configure("TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
         style.configure("bold.TLabel", font = ("Yu Gothic UI", 25, "bold"), anchor = "center", background = "white")
         style.configure("logo.TLabel", background = "white")
@@ -72,7 +58,7 @@ class Main():
         startup_frame = ttk.Frame(startup, style = "TFrame")
         startup_frame.place(x = (screen_width - 700) / 2, y = (screen_height - 150) / 2, width = 700, height = 150)
 
-        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
+        logo = tk.PhotoImage(file = logo_path)
         logo_label = ttk.Label(startup_frame, image = logo, style = "logo.TLabel")
         logo_label.place(x = 0, y = 0, width = 300 + 20, height = 100)
         logo_label.image = logo
@@ -81,7 +67,7 @@ class Main():
         ver_label = ttk.Label(startup_frame, text = ver, style = "bold.TLabel")
         ver_label.place(x = 0, y = 100, width = 300 + 20, height = 150 - 100)
 
-        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます\n(C) 2023 cyber-yuito723\n終了：「Ctrl」キー＋「Q」キー"
+        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n(C) 2023 cyber-yuito723\nヘルプ画面：「Ctrl」キー＋「H」キー"
         text_label = ttk.Label(startup_frame, text = text, style = "TLabel")
         text_label.place(x = 300 + 20, y = 0, width = 700 - 300 - 20, height = 150)
 
@@ -89,7 +75,7 @@ class Main():
         header = ttk.Frame(style = "TFrame")
         header.place(x = 0, y = 0, width = screen_width, height = 100)
 
-        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
+        logo = tk.PhotoImage(file = logo_path)
         logo_label = ttk.Label(header, image = logo, style = "logo.TLabel")
         logo_label.place(x = 10, y = 0, width = 300, height = 100)
         logo_label.image = logo
@@ -172,7 +158,8 @@ class Main():
                      settings.t0_0_1_n, settings.t0_0_1_s, settings.t0_0_1_p, settings.t0_1_1_n, settings.t0_1_1_s, settings.t0_1_1_p, settings.t0_2_1_n, settings.t0_2_1_s, settings.t0_2_1_p, settings.t0_3_1_n, settings.t0_3_1_s, settings.t0_3_1_p, settings.t0_4_1_n, settings.t0_4_1_s, settings.t0_4_1_p,
                      settings.t0_0_2_n, settings.t0_0_2_s, settings.t0_0_2_p, settings.t0_1_2_n, settings.t0_1_2_s, settings.t0_1_2_p, settings.t0_2_2_n, settings.t0_2_2_s, settings.t0_2_2_p, settings.t0_3_2_n, settings.t0_3_2_s, settings.t0_3_2_p, settings.t0_4_2_n, settings.t0_4_2_s, settings.t0_4_2_p,
                      settings.t0_0_3_n, settings.t0_0_3_s, settings.t0_0_3_p, settings.t0_1_3_n, settings.t0_1_3_s, settings.t0_1_3_p, settings.t0_2_3_n, settings.t0_2_3_s, settings.t0_2_3_p, settings.t0_3_3_n, settings.t0_3_3_s, settings.t0_3_3_p, settings.t0_4_3_n, settings.t0_4_3_s, settings.t0_4_3_p,
-                     settings.t0_0_4_n, settings.t0_0_4_s, settings.t0_0_4_p, settings.t0_1_4_n, settings.t0_1_4_s, settings.t0_1_4_p, settings.t0_2_4_n, settings.t0_2_4_s, settings.t0_2_4_p, settings.t0_3_4_n, settings.t0_3_4_s, settings.t0_3_4_p, settings.t0_4_4_n, settings.t0_4_4_s, settings.t0_4_4_p)
+                     settings.t0_0_4_n, settings.t0_0_4_s, settings.t0_0_4_p, settings.t0_1_4_n, settings.t0_1_4_s, settings.t0_1_4_p, settings.t0_2_4_n, settings.t0_2_4_s, settings.t0_2_4_p, settings.t0_3_4_n, settings.t0_3_4_s, settings.t0_3_4_p, settings.t0_4_4_n, settings.t0_4_4_s, settings.t0_4_4_p
+                    )
 
     def main_tab_1(self):
         main_tab_1 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -182,7 +169,8 @@ class Main():
                      settings.t1_0_1_n, settings.t1_0_1_s, settings.t1_0_1_p, settings.t1_1_1_n, settings.t1_1_1_s, settings.t1_1_1_p, settings.t1_2_1_n, settings.t1_2_1_s, settings.t1_2_1_p, settings.t1_3_1_n, settings.t1_3_1_s, settings.t1_3_1_p, settings.t1_4_1_n, settings.t1_4_1_s, settings.t1_4_1_p,
                      settings.t1_0_2_n, settings.t1_0_2_s, settings.t1_0_2_p, settings.t1_1_2_n, settings.t1_1_2_s, settings.t1_1_2_p, settings.t1_2_2_n, settings.t1_2_2_s, settings.t1_2_2_p, settings.t1_3_2_n, settings.t1_3_2_s, settings.t1_3_2_p, settings.t1_4_2_n, settings.t1_4_2_s, settings.t1_4_2_p,
                      settings.t1_0_3_n, settings.t1_0_3_s, settings.t1_0_3_p, settings.t1_1_3_n, settings.t1_1_3_s, settings.t1_1_3_p, settings.t1_2_3_n, settings.t1_2_3_s, settings.t1_2_3_p, settings.t1_3_3_n, settings.t1_3_3_s, settings.t1_3_3_p, settings.t1_4_3_n, settings.t1_4_3_s, settings.t1_4_3_p,
-                     settings.t1_0_4_n, settings.t1_0_4_s, settings.t1_0_4_p, settings.t1_1_4_n, settings.t1_1_4_s, settings.t1_1_4_p, settings.t1_2_4_n, settings.t1_2_4_s, settings.t1_2_4_p, settings.t1_3_4_n, settings.t1_3_4_s, settings.t1_3_4_p, settings.t1_4_4_n, settings.t1_4_4_s, settings.t1_4_4_p)
+                     settings.t1_0_4_n, settings.t1_0_4_s, settings.t1_0_4_p, settings.t1_1_4_n, settings.t1_1_4_s, settings.t1_1_4_p, settings.t1_2_4_n, settings.t1_2_4_s, settings.t1_2_4_p, settings.t1_3_4_n, settings.t1_3_4_s, settings.t1_3_4_p, settings.t1_4_4_n, settings.t1_4_4_s, settings.t1_4_4_p
+                    )
 
     def main_tab_2(self):
         main_tab_2 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -192,7 +180,8 @@ class Main():
                      settings.t2_0_1_n, settings.t2_0_1_s, settings.t2_0_1_p, settings.t2_1_1_n, settings.t2_1_1_s, settings.t2_1_1_p, settings.t2_2_1_n, settings.t2_2_1_s, settings.t2_2_1_p, settings.t2_3_1_n, settings.t2_3_1_s, settings.t2_3_1_p, settings.t2_4_1_n, settings.t2_4_1_s, settings.t2_4_1_p,
                      settings.t2_0_2_n, settings.t2_0_2_s, settings.t2_0_2_p, settings.t2_1_2_n, settings.t2_1_2_s, settings.t2_1_2_p, settings.t2_2_2_n, settings.t2_2_2_s, settings.t2_2_2_p, settings.t2_3_2_n, settings.t2_3_2_s, settings.t2_3_2_p, settings.t2_4_2_n, settings.t2_4_2_s, settings.t2_4_2_p,
                      settings.t2_0_3_n, settings.t2_0_3_s, settings.t2_0_3_p, settings.t2_1_3_n, settings.t2_1_3_s, settings.t2_1_3_p, settings.t2_2_3_n, settings.t2_2_3_s, settings.t2_2_3_p, settings.t2_3_3_n, settings.t2_3_3_s, settings.t2_3_3_p, settings.t2_4_3_n, settings.t2_4_3_s, settings.t2_4_3_p,
-                     settings.t2_0_4_n, settings.t2_0_4_s, settings.t2_0_4_p, settings.t2_1_4_n, settings.t2_1_4_s, settings.t2_1_4_p, settings.t2_2_4_n, settings.t2_2_4_s, settings.t2_2_4_p, settings.t2_3_4_n, settings.t2_3_4_s, settings.t2_3_4_p, settings.t2_4_4_n, settings.t2_4_4_s, settings.t2_4_4_p)
+                     settings.t2_0_4_n, settings.t2_0_4_s, settings.t2_0_4_p, settings.t2_1_4_n, settings.t2_1_4_s, settings.t2_1_4_p, settings.t2_2_4_n, settings.t2_2_4_s, settings.t2_2_4_p, settings.t2_3_4_n, settings.t2_3_4_s, settings.t2_3_4_p, settings.t2_4_4_n, settings.t2_4_4_s, settings.t2_4_4_p
+                    )
 
     def main_tab_3(self):
         main_tab_3 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -202,7 +191,8 @@ class Main():
                      settings.t3_0_1_n, settings.t3_0_1_s, settings.t3_0_1_p, settings.t3_1_1_n, settings.t3_1_1_s, settings.t3_1_1_p, settings.t3_2_1_n, settings.t3_2_1_s, settings.t3_2_1_p, settings.t3_3_1_n, settings.t3_3_1_s, settings.t3_3_1_p, settings.t3_4_1_n, settings.t3_4_1_s, settings.t3_4_1_p,
                      settings.t3_0_2_n, settings.t3_0_2_s, settings.t3_0_2_p, settings.t3_1_2_n, settings.t3_1_2_s, settings.t3_1_2_p, settings.t3_2_2_n, settings.t3_2_2_s, settings.t3_2_2_p, settings.t3_3_2_n, settings.t3_3_2_s, settings.t3_3_2_p, settings.t3_4_2_n, settings.t3_4_2_s, settings.t3_4_2_p,
                      settings.t3_0_3_n, settings.t3_0_3_s, settings.t3_0_3_p, settings.t3_1_3_n, settings.t3_1_3_s, settings.t3_1_3_p, settings.t3_2_3_n, settings.t3_2_3_s, settings.t3_2_3_p, settings.t3_3_3_n, settings.t3_3_3_s, settings.t3_3_3_p, settings.t3_4_3_n, settings.t3_4_3_s, settings.t3_4_3_p,
-                     settings.t3_0_4_n, settings.t3_0_4_s, settings.t3_0_4_p, settings.t3_1_4_n, settings.t3_1_4_s, settings.t3_1_4_p, settings.t3_2_4_n, settings.t3_2_4_s, settings.t3_2_4_p, settings.t3_3_4_n, settings.t3_3_4_s, settings.t3_3_4_p, settings.t3_4_4_n, settings.t3_4_4_s, settings.t3_4_4_p)
+                     settings.t3_0_4_n, settings.t3_0_4_s, settings.t3_0_4_p, settings.t3_1_4_n, settings.t3_1_4_s, settings.t3_1_4_p, settings.t3_2_4_n, settings.t3_2_4_s, settings.t3_2_4_p, settings.t3_3_4_n, settings.t3_3_4_s, settings.t3_3_4_p, settings.t3_4_4_n, settings.t3_4_4_s, settings.t3_4_4_p
+                    )
 
     def main_tab_4(self):
         main_tab_4 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -212,7 +202,8 @@ class Main():
                      settings.t4_0_1_n, settings.t4_0_1_s, settings.t4_0_1_p, settings.t4_1_1_n, settings.t4_1_1_s, settings.t4_1_1_p, settings.t4_2_1_n, settings.t4_2_1_s, settings.t4_2_1_p, settings.t4_3_1_n, settings.t4_3_1_s, settings.t4_3_1_p, settings.t4_4_1_n, settings.t4_4_1_s, settings.t4_4_1_p,
                      settings.t4_0_2_n, settings.t4_0_2_s, settings.t4_0_2_p, settings.t4_1_2_n, settings.t4_1_2_s, settings.t4_1_2_p, settings.t4_2_2_n, settings.t4_2_2_s, settings.t4_2_2_p, settings.t4_3_2_n, settings.t4_3_2_s, settings.t4_3_2_p, settings.t4_4_2_n, settings.t4_4_2_s, settings.t4_4_2_p,
                      settings.t4_0_3_n, settings.t4_0_3_s, settings.t4_0_3_p, settings.t4_1_3_n, settings.t4_1_3_s, settings.t4_1_3_p, settings.t4_2_3_n, settings.t4_2_3_s, settings.t4_2_3_p, settings.t4_3_3_n, settings.t4_3_3_s, settings.t4_3_3_p, settings.t4_4_3_n, settings.t4_4_3_s, settings.t4_4_3_p,
-                     settings.t4_0_4_n, settings.t4_0_4_s, settings.t4_0_4_p, settings.t4_1_4_n, settings.t4_1_4_s, settings.t4_1_4_p, settings.t4_2_4_n, settings.t4_2_4_s, settings.t4_2_4_p, settings.t4_3_4_n, settings.t4_3_4_s, settings.t4_3_4_p, settings.t4_4_4_n, settings.t4_4_4_s, settings.t4_4_4_p)
+                     settings.t4_0_4_n, settings.t4_0_4_s, settings.t4_0_4_p, settings.t4_1_4_n, settings.t4_1_4_s, settings.t4_1_4_p, settings.t4_2_4_n, settings.t4_2_4_s, settings.t4_2_4_p, settings.t4_3_4_n, settings.t4_3_4_s, settings.t4_3_4_p, settings.t4_4_4_n, settings.t4_4_4_s, settings.t4_4_4_p
+                    )
 
     def main_tab_5(self):
         main_tab_5 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -222,7 +213,8 @@ class Main():
                      settings.t5_0_1_n, settings.t5_0_1_s, settings.t5_0_1_p, settings.t5_1_1_n, settings.t5_1_1_s, settings.t5_1_1_p, settings.t5_2_1_n, settings.t5_2_1_s, settings.t5_2_1_p, settings.t5_3_1_n, settings.t5_3_1_s, settings.t5_3_1_p, settings.t5_4_1_n, settings.t5_4_1_s, settings.t5_4_1_p,
                      settings.t5_0_2_n, settings.t5_0_2_s, settings.t5_0_2_p, settings.t5_1_2_n, settings.t5_1_2_s, settings.t5_1_2_p, settings.t5_2_2_n, settings.t5_2_2_s, settings.t5_2_2_p, settings.t5_3_2_n, settings.t5_3_2_s, settings.t5_3_2_p, settings.t5_4_2_n, settings.t5_4_2_s, settings.t5_4_2_p,
                      settings.t5_0_3_n, settings.t5_0_3_s, settings.t5_0_3_p, settings.t5_1_3_n, settings.t5_1_3_s, settings.t5_1_3_p, settings.t5_2_3_n, settings.t5_2_3_s, settings.t5_2_3_p, settings.t5_3_3_n, settings.t5_3_3_s, settings.t5_3_3_p, settings.t5_4_3_n, settings.t5_4_3_s, settings.t5_4_3_p,
-                     settings.t5_0_4_n, settings.t5_0_4_s, settings.t5_0_4_p, settings.t5_1_4_n, settings.t5_1_4_s, settings.t5_1_4_p, settings.t5_2_4_n, settings.t5_2_4_s, settings.t5_2_4_p, settings.t5_3_4_n, settings.t5_3_4_s, settings.t5_3_4_p, settings.t5_4_4_n, settings.t5_4_4_s, settings.t5_4_4_p)
+                     settings.t5_0_4_n, settings.t5_0_4_s, settings.t5_0_4_p, settings.t5_1_4_n, settings.t5_1_4_s, settings.t5_1_4_p, settings.t5_2_4_n, settings.t5_2_4_s, settings.t5_2_4_p, settings.t5_3_4_n, settings.t5_3_4_s, settings.t5_3_4_p, settings.t5_4_4_n, settings.t5_4_4_s, settings.t5_4_4_p
+                    )
 
     def main_tab_6(self):
         main_tab_6 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -232,7 +224,8 @@ class Main():
                      settings.t6_0_1_n, settings.t6_0_1_s, settings.t6_0_1_p, settings.t6_1_1_n, settings.t6_1_1_s, settings.t6_1_1_p, settings.t6_2_1_n, settings.t6_2_1_s, settings.t6_2_1_p, settings.t6_3_1_n, settings.t6_3_1_s, settings.t6_3_1_p, settings.t6_4_1_n, settings.t6_4_1_s, settings.t6_4_1_p,
                      settings.t6_0_2_n, settings.t6_0_2_s, settings.t6_0_2_p, settings.t6_1_2_n, settings.t6_1_2_s, settings.t6_1_2_p, settings.t6_2_2_n, settings.t6_2_2_s, settings.t6_2_2_p, settings.t6_3_2_n, settings.t6_3_2_s, settings.t6_3_2_p, settings.t6_4_2_n, settings.t6_4_2_s, settings.t6_4_2_p,
                      settings.t6_0_3_n, settings.t6_0_3_s, settings.t6_0_3_p, settings.t6_1_3_n, settings.t6_1_3_s, settings.t6_1_3_p, settings.t6_2_3_n, settings.t6_2_3_s, settings.t6_2_3_p, settings.t6_3_3_n, settings.t6_3_3_s, settings.t6_3_3_p, settings.t6_4_3_n, settings.t6_4_3_s, settings.t6_4_3_p,
-                     settings.t6_0_4_n, settings.t6_0_4_s, settings.t6_0_4_p, settings.t6_1_4_n, settings.t6_1_4_s, settings.t6_1_4_p, settings.t6_2_4_n, settings.t6_2_4_s, settings.t6_2_4_p, settings.t6_3_4_n, settings.t6_3_4_s, settings.t6_3_4_p, settings.t6_4_4_n, settings.t6_4_4_s, settings.t6_4_4_p)
+                     settings.t6_0_4_n, settings.t6_0_4_s, settings.t6_0_4_p, settings.t6_1_4_n, settings.t6_1_4_s, settings.t6_1_4_p, settings.t6_2_4_n, settings.t6_2_4_s, settings.t6_2_4_p, settings.t6_3_4_n, settings.t6_3_4_s, settings.t6_3_4_p, settings.t6_4_4_n, settings.t6_4_4_s, settings.t6_4_4_p
+                    )
 
     def main_tab_7(self):
         main_tab_7 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -242,7 +235,8 @@ class Main():
                      settings.t7_0_1_n, settings.t7_0_1_s, settings.t7_0_1_p, settings.t7_1_1_n, settings.t7_1_1_s, settings.t7_1_1_p, settings.t7_2_1_n, settings.t7_2_1_s, settings.t7_2_1_p, settings.t7_3_1_n, settings.t7_3_1_s, settings.t7_3_1_p, settings.t7_4_1_n, settings.t7_4_1_s, settings.t7_4_1_p,
                      settings.t7_0_2_n, settings.t7_0_2_s, settings.t7_0_2_p, settings.t7_1_2_n, settings.t7_1_2_s, settings.t7_1_2_p, settings.t7_2_2_n, settings.t7_2_2_s, settings.t7_2_2_p, settings.t7_3_2_n, settings.t7_3_2_s, settings.t7_3_2_p, settings.t7_4_2_n, settings.t7_4_2_s, settings.t7_4_2_p,
                      settings.t7_0_3_n, settings.t7_0_3_s, settings.t7_0_3_p, settings.t7_1_3_n, settings.t7_1_3_s, settings.t7_1_3_p, settings.t7_2_3_n, settings.t7_2_3_s, settings.t7_2_3_p, settings.t7_3_3_n, settings.t7_3_3_s, settings.t7_3_3_p, settings.t7_4_3_n, settings.t7_4_3_s, settings.t7_4_3_p,
-                     settings.t7_0_4_n, settings.t7_0_4_s, settings.t7_0_4_p, settings.t7_1_4_n, settings.t7_1_4_s, settings.t7_1_4_p, settings.t7_2_4_n, settings.t7_2_4_s, settings.t7_2_4_p, settings.t7_3_4_n, settings.t7_3_4_s, settings.t7_3_4_p, settings.t7_4_4_n, settings.t7_4_4_s, settings.t7_4_4_p)
+                     settings.t7_0_4_n, settings.t7_0_4_s, settings.t7_0_4_p, settings.t7_1_4_n, settings.t7_1_4_s, settings.t7_1_4_p, settings.t7_2_4_n, settings.t7_2_4_s, settings.t7_2_4_p, settings.t7_3_4_n, settings.t7_3_4_s, settings.t7_3_4_p, settings.t7_4_4_n, settings.t7_4_4_s, settings.t7_4_4_p
+                    )
 
     def main_tab_8(self):
         main_tab_8 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -252,7 +246,8 @@ class Main():
                      settings.t8_0_1_n, settings.t8_0_1_s, settings.t8_0_1_p, settings.t8_1_1_n, settings.t8_1_1_s, settings.t8_1_1_p, settings.t8_2_1_n, settings.t8_2_1_s, settings.t8_2_1_p, settings.t8_3_1_n, settings.t8_3_1_s, settings.t8_3_1_p, settings.t8_4_1_n, settings.t8_4_1_s, settings.t8_4_1_p,
                      settings.t8_0_2_n, settings.t8_0_2_s, settings.t8_0_2_p, settings.t8_1_2_n, settings.t8_1_2_s, settings.t8_1_2_p, settings.t8_2_2_n, settings.t8_2_2_s, settings.t8_2_2_p, settings.t8_3_2_n, settings.t8_3_2_s, settings.t8_3_2_p, settings.t8_4_2_n, settings.t8_4_2_s, settings.t8_4_2_p,
                      settings.t8_0_3_n, settings.t8_0_3_s, settings.t8_0_3_p, settings.t8_1_3_n, settings.t8_1_3_s, settings.t8_1_3_p, settings.t8_2_3_n, settings.t8_2_3_s, settings.t8_2_3_p, settings.t8_3_3_n, settings.t8_3_3_s, settings.t8_3_3_p, settings.t8_4_3_n, settings.t8_4_3_s, settings.t8_4_3_p,
-                     settings.t8_0_4_n, settings.t8_0_4_s, settings.t8_0_4_p, settings.t8_1_4_n, settings.t8_1_4_s, settings.t8_1_4_p, settings.t8_2_4_n, settings.t8_2_4_s, settings.t8_2_4_p, settings.t8_3_4_n, settings.t8_3_4_s, settings.t8_3_4_p, settings.t8_4_4_n, settings.t8_4_4_s, settings.t8_4_4_p)
+                     settings.t8_0_4_n, settings.t8_0_4_s, settings.t8_0_4_p, settings.t8_1_4_n, settings.t8_1_4_s, settings.t8_1_4_p, settings.t8_2_4_n, settings.t8_2_4_s, settings.t8_2_4_p, settings.t8_3_4_n, settings.t8_3_4_s, settings.t8_3_4_p, settings.t8_4_4_n, settings.t8_4_4_s, settings.t8_4_4_p
+                    )
 
     def main_tab_9(self):
         main_tab_9 = ttk.Frame(self.main, padding = 5, style = "TFrame")
@@ -262,7 +257,8 @@ class Main():
                      settings.t9_0_1_n, settings.t9_0_1_s, settings.t9_0_1_p, settings.t9_1_1_n, settings.t9_1_1_s, settings.t9_1_1_p, settings.t9_2_1_n, settings.t9_2_1_s, settings.t9_2_1_p, settings.t9_3_1_n, settings.t9_3_1_s, settings.t9_3_1_p, settings.t9_4_1_n, settings.t9_4_1_s, settings.t9_4_1_p,
                      settings.t9_0_2_n, settings.t9_0_2_s, settings.t9_0_2_p, settings.t9_1_2_n, settings.t9_1_2_s, settings.t9_1_2_p, settings.t9_2_2_n, settings.t9_2_2_s, settings.t9_2_2_p, settings.t9_3_2_n, settings.t9_3_2_s, settings.t9_3_2_p, settings.t9_4_2_n, settings.t9_4_2_s, settings.t9_4_2_p,
                      settings.t9_0_3_n, settings.t9_0_3_s, settings.t9_0_3_p, settings.t9_1_3_n, settings.t9_1_3_s, settings.t9_1_3_p, settings.t9_2_3_n, settings.t9_2_3_s, settings.t9_2_3_p, settings.t9_3_3_n, settings.t9_3_3_s, settings.t9_3_3_p, settings.t9_4_3_n, settings.t9_4_3_s, settings.t9_4_3_p,
-                     settings.t9_0_4_n, settings.t9_0_4_s, settings.t9_0_4_p, settings.t9_1_4_n, settings.t9_1_4_s, settings.t9_1_4_p, settings.t9_2_4_n, settings.t9_2_4_s, settings.t9_2_4_p, settings.t9_3_4_n, settings.t9_3_4_s, settings.t9_3_4_p, settings.t9_4_4_n, settings.t9_4_4_s, settings.t9_4_4_p)
+                     settings.t9_0_4_n, settings.t9_0_4_s, settings.t9_0_4_p, settings.t9_1_4_n, settings.t9_1_4_s, settings.t9_1_4_p, settings.t9_2_4_n, settings.t9_2_4_s, settings.t9_2_4_p, settings.t9_3_4_n, settings.t9_3_4_s, settings.t9_3_4_p, settings.t9_4_4_n, settings.t9_4_4_s, settings.t9_4_4_p
+                    )
 
     def confirm(self, name, path):
         confirm = tk.Toplevel()
@@ -274,7 +270,7 @@ class Main():
         confirm.configure(background = "white")
         confirm.focus_force()
 
-        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
+        logo = tk.PhotoImage(file = logo_path)
         logo_label = ttk.Label(confirm, image = logo, style = "logo.TLabel")
         logo_label.place(x = 10, y = 0, width = 300, height = 100)
         logo_label.image = logo
@@ -305,7 +301,7 @@ class Main():
         playsound.configure(background = "white")
         playsound.focus_force()
 
-        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
+        logo = tk.PhotoImage(file = logo_path)
         logo_label = ttk.Label(playsound, image = logo, style = "logo.TLabel")
         logo_label.place(x = 10, y = 0, width = 300, height = 100)
         logo_label.image = logo
@@ -341,7 +337,7 @@ class Main():
         help.configure(background = "white")
         help.focus_force()
 
-        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
+        logo = tk.PhotoImage(file = logo_path)
         logo_label = ttk.Label(help, image = logo, style = "logo.TLabel")
         logo_label.place(x = 10, y = 0, width = 300, height = 100)
         logo_label.image = logo
@@ -396,35 +392,57 @@ class Main():
 
         logo = tk.PhotoImage(file = "./system/logo-2_small.png")
         logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
-        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2, width = 300, height = 100)
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 75 + 75 + 50 + 50)) / 2, width = 300, height = 100)
         logo_label.image = logo
 
         logo = tk.PhotoImage(file = "./system/logo-2_beta_small.png")
         logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
-        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2 + 300 + 10, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2, width = 300, height = 100)
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2 + 300 + 10, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 75 + 75 + 50 + 50)) / 2, width = 300, height = 100)
         logo_label.image = logo
 
         text = f"TeaChimer-{version}"
         text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100, width = (screen_width - 10 * 3) / 2, height = 50)
 
         text = f"version : {version}\nedition : {edition}"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50, width = (screen_width - 10 * 3) / 2, height = 100)
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100 + 50, width = (screen_width - 10 * 3) / 2, height = 75)
 
-        text = "　TeaChimerはオープンソースソフトウェアであり、GNU General Public License v3.0に\n基づいて再配布したり改変したりできます"
+        text = "　TeaChimerはオープンソースソフトウェアであり、GNU General Public License v3.0\nに基づいて再配布したり改変したりできます。"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50 + 100, width = (screen_width - 10 * 3) / 2, height = 100)
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100 + 50 + 75, width = (screen_width - 10 * 3) / 2, height = 75)
+
+        text = "website : https://github.com/cyber-yuito723/TeaChimer"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100 + 50 + 75 + 75, width = (screen_width - 10 * 3) / 2, height = 50)
 
         text = "(C) 2023 cyber-yuito723"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 100 + 100 + 50)) / 2 + 100 + 50 + 100 + 100, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100 + 50 + 75 + 75 + 50, width = (screen_width - 10 * 3) / 2, height = 50)
 
         sep = ttk.Separator(help_tab_2, orient = "vertical", style = "TSeparator")
         sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
 
         right_frame = ttk.Frame(help_tab_2, style = "TFrame")
         right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
+
+        text = """
+This file is part of TeaChimer.
+
+TeaChimer is free software: you can redistribute it and/or modify it under the terms
+of the GNU General Public License as published by the Free Software Foundation,
+either version 3 of the License, or (at your option) any later version.
+
+TeaChimer is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with TeaChimer. If not, see "https://www.gnu.org/licenses/".
+"""
+        text_label = ttk.Label(right_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
     def exit(self, event):
         exit = tk.Toplevel()
@@ -436,7 +454,7 @@ class Main():
         exit.configure(background = "white")
         exit.focus_force()
 
-        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
+        logo = tk.PhotoImage(file = logo_path)
         logo_label = ttk.Label(exit, image = logo, style = "logo.TLabel")
         logo_label.place(x = 10, y = 0, width = 300, height = 100)
         logo_label.image = logo
@@ -460,12 +478,15 @@ class Main():
 # if mbox.showinfo("解像度が足りません", "ディスプレイの解像度は\n1500ピクセルx700ピクセル以上ないと\n起動できません"):
 #     pass
 root = tk.Tk()
-screen_width = root.winfo_screenwidth()
-screen_height = root.winfo_screenheight()
+# screen_width = root.winfo_screenwidth()
+# screen_height = root.winfo_screenheight()
+screen_width = 1500
+screen_height = 700
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
+logo_path = "./system/logo-2_beta_small.png"
 version = "v1.1.0"
-edition = "normal"
+edition = "BETA"
 if screen_width < 1500 or screen_height < 700:
     exit()
 app = Main(root)
