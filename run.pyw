@@ -378,38 +378,33 @@ class Main():
         left_frame.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
         text = "このアプリは、同じディレクトリにある「settings.py」を書き換えて設定できます。"
-        text_label = ttk.Label(left_frame, text = text, style = "TLabel", background="red")
-        text_label.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2, width = (screen_width - 10 * 3) / 2, height = 50)
 
         text = "ヘッダー部分の学校名と管理者名を設定する場合"
-        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel", background="red")
-        text_label.place(x = 0, y = 50, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50, width = (screen_width - 10 * 3) / 2, height = 50)
 
-        text = """
-以下の部分を変更します。
+        text = """以下の部分を変更します。
 
-school_name = "学校名"
-admin_name = "管理者名"
+school_name = "school name"
+admin_name = "admin's name"
 
-「"」で囲まれている文字列を書き換えると変更できます。
-"""
-        text_label = ttk.Label(left_frame, text = text, style = "TLabel", background="red")
-        text_label.place(x = 0, y = 50 + 50, width = (screen_width - 10 * 3) / 2, height = 250)
+「"」で囲まれている文字列を書き換えると変更できます。"""
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50 + 50, width = (screen_width - 10 * 3) / 2, height = 200)
 
         text = "タブの文字列を設定する場合"
-        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel", background="red")
-        text_label.place(x = 0, y = 50 + 50 + 250, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50 + 50 + 200, width = (screen_width - 10 * 3) / 2, height = 50)
 
-        text = """
-以下の部分を変更します。
+        text = """以下の部分を変更します。
 
-school_name = "学校名"
-admin_name = "管理者名"
+main_tab_*_n = "tab string"
 
-「"」で囲まれている文字列を書き換えると変更できます。
-"""
-        text_label = ttk.Label(left_frame, text = text, style = "TLabel", background="red")
-        text_label.place(x = 0, y = 50 + 50 + 250 + 50, width = (screen_width - 10 * 3) / 2, height = 200)
+「"」で囲まれている文字列を書き換えると変更できます。"""
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50 + 50 + 200 + 50, width = (screen_width - 10 * 3) / 2, height = 150)
 
         sep = ttk.Separator(help_tab_1, orient = "vertical", style = "TSeparator")
         sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
@@ -419,7 +414,17 @@ admin_name = "管理者名"
 
         text = "ボタンの名前・状態と音声のパスを設定する場合"
         text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel", background="red")
-        text_label.place(x = 0, y = 50, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50, width = (screen_width - 10 * 3) / 2, height = 50)
+
+        text = """以下の部分を変更します。
+
+t*_*_*_n = "teacher's name"
+t*_*_*_p = "file path"
+t*_*_*_s = "normal" or "disabled"
+
+「"」で囲まれている文字列を書き換えると変更できます。"""
+        text_label = ttk.Label(right_frame, text = text, style = "TLabel", background="yellow")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50 + 50, width = (screen_width - 10 * 3) / 2, height = 200)
 
     def help_tab_2(self, help_tab):
         help_tab_2 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
@@ -464,8 +469,7 @@ admin_name = "管理者名"
         right_frame = ttk.Frame(help_tab_2, style = "TFrame")
         right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
-        text = """
-This file is part of TeaChimer.
+        text = """This file is part of TeaChimer.
 
 TeaChimer is free software: you can redistribute it and/or modify it under the terms
 of the GNU General Public License as published by the Free Software Foundation,
@@ -477,8 +481,7 @@ of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
-with TeaChimer. If not, see "https://www.gnu.org/licenses/".
-"""
+with TeaChimer. If not, see "https://www.gnu.org/licenses/"."""
         text_label = ttk.Label(right_frame, text = text, style = "TLabel")
         text_label.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
