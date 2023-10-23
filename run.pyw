@@ -413,7 +413,7 @@ main_tab_*_n = "tab string"
         right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
         text = "ボタンの名前・状態と音声のパスを設定する場合"
-        text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel", background="red")
+        text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel")
         text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50, width = (screen_width - 10 * 3) / 2, height = 50)
 
         text = """以下の部分を変更します。
@@ -423,7 +423,7 @@ t*_*_*_p = "file path"
 t*_*_*_s = "normal" or "disabled"
 
 「"」で囲まれている文字列を書き換えると変更できます。"""
-        text_label = ttk.Label(right_frame, text = text, style = "TLabel", background="yellow")
+        text_label = ttk.Label(right_frame, text = text, style = "TLabel")
         text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50 + 50, width = (screen_width - 10 * 3) / 2, height = 200)
 
     def help_tab_2(self, help_tab):
@@ -522,7 +522,7 @@ root = tk.Tk()
 # screen_width = root.winfo_screenwidth()
 # screen_height = root.winfo_screenheight()
 screen_width = 1500
-screen_height = 700
+screen_height = 900
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
 logo_path = "./system/logo-2_small.png"
