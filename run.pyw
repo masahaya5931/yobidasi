@@ -377,11 +377,49 @@ class Main():
         left_frame = ttk.Frame(help_tab_1, style = "TFrame")
         left_frame.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
+        text = "このアプリは、同じディレクトリにある「settings.py」を書き換えて設定できます。"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel", background="red")
+        text_label.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = 50)
+
+        text = "ヘッダー部分の学校名と管理者名を設定する場合"
+        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel", background="red")
+        text_label.place(x = 0, y = 50, width = (screen_width - 10 * 3) / 2, height = 50)
+
+        text = """
+以下の部分を変更します。
+
+school_name = "学校名"
+admin_name = "管理者名"
+
+「"」で囲まれている文字列を書き換えると変更できます。
+"""
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel", background="red")
+        text_label.place(x = 0, y = 50 + 50, width = (screen_width - 10 * 3) / 2, height = 250)
+
+        text = "タブの文字列を設定する場合"
+        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel", background="red")
+        text_label.place(x = 0, y = 50 + 50 + 250, width = (screen_width - 10 * 3) / 2, height = 50)
+
+        text = """
+以下の部分を変更します。
+
+school_name = "学校名"
+admin_name = "管理者名"
+
+「"」で囲まれている文字列を書き換えると変更できます。
+"""
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel", background="red")
+        text_label.place(x = 0, y = 50 + 50 + 250 + 50, width = (screen_width - 10 * 3) / 2, height = 200)
+
         sep = ttk.Separator(help_tab_1, orient = "vertical", style = "TSeparator")
         sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
 
         right_frame = ttk.Frame(help_tab_1, style = "TFrame")
         right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
+
+        text = "ボタンの名前・状態と音声のパスを設定する場合"
+        text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel", background="red")
+        text_label.place(x = 0, y = 50, width = (screen_width - 10 * 3) / 2, height = 50)
 
     def help_tab_2(self, help_tab):
         help_tab_2 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
@@ -484,9 +522,9 @@ screen_width = 1500
 screen_height = 700
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
-logo_path = "./system/logo-2_beta_small.png"
+logo_path = "./system/logo-2_small.png"
 version = "v1.1.0"
-edition = "BETA"
+edition = "normal"
 if screen_width < 1500 or screen_height < 700:
     exit()
 app = Main(root)
