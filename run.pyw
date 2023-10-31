@@ -355,7 +355,6 @@ class Main():
 
         self.help_tab_0(help_tab)
         self.help_tab_1(help_tab)
-        self.help_tab_2(help_tab)
 
     def help_tab_0(self, help_tab):
         help_tab_0 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
@@ -372,65 +371,9 @@ class Main():
 
     def help_tab_1(self, help_tab):
         help_tab_1 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
-        help_tab.add(help_tab_1, text = "設定方法")
+        help_tab.add(help_tab_1, text = "ライセンス")
 
         left_frame = ttk.Frame(help_tab_1, style = "TFrame")
-        left_frame.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
-
-        text = "このアプリは、同じディレクトリにある「settings.py」を書き換えて設定できます。"
-        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2, width = (screen_width - 10 * 3) / 2, height = 50)
-
-        text = "ヘッダー部分の学校名と管理者名を設定する場合"
-        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50, width = (screen_width - 10 * 3) / 2, height = 50)
-
-        text = """以下の部分を変更します。
-
-school_name = "school name"
-admin_name = "admin's name"
-
-「"」で囲まれている文字列を書き換えると変更できます。"""
-        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50 + 50, width = (screen_width - 10 * 3) / 2, height = 200)
-
-        text = "タブの文字列を設定する場合"
-        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50 + 50 + 200, width = (screen_width - 10 * 3) / 2, height = 50)
-
-        text = """以下の部分を変更します。
-
-main_tab_*_n = "tab string"
-
-「"」で囲まれている文字列を書き換えると変更できます。"""
-        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50 + 50 + 200 + 50, width = (screen_width - 10 * 3) / 2, height = 150)
-
-        sep = ttk.Separator(help_tab_1, orient = "vertical", style = "TSeparator")
-        sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
-
-        right_frame = ttk.Frame(help_tab_1, style = "TFrame")
-        right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
-
-        text = "ボタンの名前・状態と音声のパスを設定する場合"
-        text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50, width = (screen_width - 10 * 3) / 2, height = 50)
-
-        text = """以下の部分を変更します。
-
-t*_*_*_n = "teacher's name"
-t*_*_*_p = "file path"
-t*_*_*_s = "normal" or "disabled"
-
-「"」で囲まれている文字列を書き換えると変更できます。"""
-        text_label = ttk.Label(right_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 200 + 50 + 150)) / 2 + 50 + 50, width = (screen_width - 10 * 3) / 2, height = 200)
-
-    def help_tab_2(self, help_tab):
-        help_tab_2 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
-        help_tab.add(help_tab_2, text = "ライセンス")
-
-        left_frame = ttk.Frame(help_tab_2, style = "TFrame")
         left_frame.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
         logo = tk.PhotoImage(file = "./system/logo-2_small.png")
@@ -463,10 +406,10 @@ t*_*_*_s = "normal" or "disabled"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
         text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100 + 50 + 75 + 75 + 50, width = (screen_width - 10 * 3) / 2, height = 50)
 
-        sep = ttk.Separator(help_tab_2, orient = "vertical", style = "TSeparator")
+        sep = ttk.Separator(help_tab_1, orient = "vertical", style = "TSeparator")
         sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
 
-        right_frame = ttk.Frame(help_tab_2, style = "TFrame")
+        right_frame = ttk.Frame(help_tab_1, style = "TFrame")
         right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
         text = """This file is part of TeaChimer.
@@ -516,13 +459,9 @@ with TeaChimer. If not, see "https://www.gnu.org/licenses/"."""
         button = ttk.Button(exit, text = text, command = exit.destroy, style = "TButton")
         button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
 
-# if mbox.showinfo("解像度が足りません", "ディスプレイの解像度は\n1500ピクセルx700ピクセル以上ないと\n起動できません"):
-#     pass
 root = tk.Tk()
-# screen_width = root.winfo_screenwidth()
-# screen_height = root.winfo_screenheight()
-screen_width = 1500
-screen_height = 900
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
 logo_path = "./system/logo-2_small.png"
