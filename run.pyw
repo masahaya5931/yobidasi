@@ -25,7 +25,7 @@ class Main():
 
         style = ttk.Style()
         style.theme_use("clam")
-        style.configure("TFrame", background = "white")##################################################
+        style.configure("TFrame", background = "white")
         style.configure("TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
         style.configure("bold.TLabel", font = ("Yu Gothic UI", 25, "bold"), anchor = "center", background = "white")
         style.configure("logo.TLabel", background = "white")
@@ -363,11 +363,49 @@ class Main():
         left_frame = ttk.Frame(help_tab_0, style = "TFrame")
         left_frame.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
 
+        text = "リンク"
+        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel", background = "whitesmoke")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 300 + 100)) / 2, width = (screen_width - 10 * 3) / 2, height = 50)
+
+        text = "リポジトリー"
+        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
+        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 300 + 100)) / 2 + 100, width = 300, height = 50)
+
+        logo = tk.PhotoImage(file = "./system/repository.png")
+        logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 300 + 100)) / 2 + 100 + 50, width = 300, height = 300)
+        logo_label.image = logo
+
+        text = "https://github.com\n/cyber-yuito723/TeaChimer"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 300 + 100)) / 2 + 100 + 50 + 300, width = 300, height = 100)
+
+        text = "Wiki"
+        text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
+        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 300 + 100)) / 2 + 100, width = 300, height = 50)
+
+        logo = tk.PhotoImage(file = "./system/wiki.png")
+        logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 300 + 100)) / 2 + 100 + 50, width = 300, height = 300)
+        logo_label.image = logo
+
+        text = "https://github.com\n/cyber-yuito723/TeaChimer\n/wiki/How-to-use-TeaChimer"
+        text_label = ttk.Label(left_frame, text = text, style = "TLabel")
+        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 300 + 100)) / 2 + 100 + 50 + 300, width = 300, height = 100)
+
         sep = ttk.Separator(help_tab_0, orient = "vertical", style = "TSeparator")
         sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
 
         right_frame = ttk.Frame(help_tab_0, style = "TFrame")
         right_frame.place(x = (screen_width - 10 * 3) / 2 + 10, y = 0, width = (screen_width - 10 * 3) / 2, height = screen_height - 100 - 75 - 10 * 2)
+
+        text = "ショートカットキー"
+        text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel", background = "whitesmoke")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 300 + 100)) / 2, width = (screen_width - 10 * 3) / 2, height = 50)
+
+        text = "ヘルプ画面：「Ctrl」キー＋「H」キー\n終了：「Ctrl」キー＋「Q」キー"
+        text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel")
+        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (100 + 50 + 300 + 100)) / 2 + 100, width = (screen_width - 10 * 3) / 2, height = 100)
 
     def help_tab_1(self, help_tab):
         help_tab_1 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
