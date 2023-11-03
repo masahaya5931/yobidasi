@@ -506,12 +506,8 @@ with TeaChimer. If not, see "https://www.gnu.org/licenses/"."""
         button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
 
 root = tk.Tk()
-### TEST CODES ###################################
-screen_width = 1500
-screen_height = 700
-##################################################
-# screen_width = root.winfo_screenwidth()
-# screen_height = root.winfo_screenheight()
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
 logo_path = "./system/logo-2_small.png"
