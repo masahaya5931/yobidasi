@@ -371,7 +371,7 @@ class Main():
         text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
         text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50, width = 300, height = 50)
 
-        logo = tk.PhotoImage(file = "./system/repository.png")
+        logo = tk.PhotoImage(file = "./system/qr-repository.png")
         logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
         logo_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50 + 50, width = 300, height = 300)
         logo_label.image = logo
@@ -384,7 +384,7 @@ class Main():
         text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
         text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50, width = 300, height = 50)
 
-        logo = tk.PhotoImage(file = "./system/wiki.png")
+        logo = tk.PhotoImage(file = "./system/qr-wiki.png")
         logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
         logo_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50 + 50, width = 300, height = 300)
         logo_label.image = logo
