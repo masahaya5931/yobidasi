@@ -11,6 +11,7 @@ import tkinter.ttk as ttk
 import tkinter.messagebox as mbox
 import winsound
 import datetime
+import csv
 import settings
 
 class Main():
@@ -301,6 +302,26 @@ class Main():
         playsound.configure(background = "white")
         playsound.focus_force()
 
+        def sound():
+            file_date = datetime.date.today().strftime("%Y%m%d")
+            year = datetime.datetime.now().strftime("%Y年")
+            month = datetime.datetime.now().strftime("%m月")
+            date = datetime.datetime.now().strftime("%d日")
+            time = datetime.datetime.now().strftime("%H時")
+            minutes = datetime.datetime.now().strftime("%M分")
+            seconds = datetime.datetime.now().strftime("%S秒")
+            with open(f"./log/{file_date}_log.csv", "a", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow([year, month, date, time, minutes, seconds, name])
+            for i in range(2):
+                playsound.update()
+                winsound.PlaySound(f"{path}", winsound.SND_FILENAME)
+                playsound.update()
+
+        def exit():
+            confirm.destroy()
+            playsound.destroy()
+
         logo = tk.PhotoImage(file = logo_path)
         logo_label = ttk.Label(playsound, image = logo, style = "logo.TLabel")
         logo_label.place(x = 10, y = 0, width = 300, height = 100)
@@ -312,20 +333,27 @@ class Main():
 
         text = f"{name}を呼んでいます"
         text_label = ttk.Label(playsound, text = text, style = "bold.TLabel")
-        text_label.place(x = 0, y = 100, width = screen_width, height = screen_height - 100)
+        text_label.place(x = 0, y = 100 + ((screen_height - 100 - 50 - button_height) / 2), width = screen_width, height = 50)
 
-        for i in range(2):
-            playsound.update()
-            winsound.PlaySound(f"{path}", winsound.SND_FILENAME)
-            playsound.update()
+        text = "キャンセルする"
+        button = ttk.Button(playsound, text = text, command = exit, style = "TButton")
+        button.place(x = (screen_width - button_width) / 2, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
 
-        confirm.destroy()
-        playsound.destroy()
+        sound()
+        exit()
 
-        date = datetime.date.today().strftime("%Y%m%d")
-        time = datetime.datetime.now().strftime("%Y年%m月%d日%H時%M分%S秒")
-        with open(f"./log/{date}_log.txt", "a", encoding = "utf-8") as f:
-            f.write(f"{time}に{name}が呼ばれました。\n")
+        # for i in range(2):
+        #     playsound.update()
+        #     winsound.PlaySound(f"{path}", winsound.SND_FILENAME)
+        #     playsound.update()
+
+        # confirm.destroy()
+        # playsound.destroy()
+
+        # date = datetime.date.today().strftime("%Y%m%d")
+        # time = datetime.datetime.now().strftime("%Y年%m月%d日%H時%M分%S秒")
+        # with open(f"./log/{date}_log.txt", "a", encoding = "utf-8") as f:
+        #     f.write(f"{time}に{name}が呼ばれました。\n")
 
     def help(self, event):
         help = tk.Toplevel()
