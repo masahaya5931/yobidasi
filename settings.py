@@ -1,5 +1,5 @@
 """
-TeaChimer-v1.0.0
+TeaChimer-v1.1.0
 (C) 2023 cyber-yuito723
 
 school_name = "school name"
