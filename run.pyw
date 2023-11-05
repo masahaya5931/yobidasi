@@ -8,7 +8,6 @@ sys.dont_write_bytecode = True
 
 import tkinter as tk
 import tkinter.ttk as ttk
-import tkinter.messagebox as mbox
 import winsound
 import datetime
 import csv
@@ -302,27 +301,7 @@ class Main():
         playsound.configure(background = "white")
         playsound.focus_force()
 
-        def sound():
-            file_date = datetime.date.today().strftime("%Y%m%d")
-            year = datetime.datetime.now().strftime("%Y年")
-            month = datetime.datetime.now().strftime("%m月")
-            date = datetime.datetime.now().strftime("%d日")
-            time = datetime.datetime.now().strftime("%H時")
-            minutes = datetime.datetime.now().strftime("%M分")
-            seconds = datetime.datetime.now().strftime("%S秒")
-            with open(f"./log/{file_date}_log.csv", "a", newline="") as f:
-                writer = csv.writer(f)
-                writer.writerow([year, month, date, time, minutes, seconds, name])
-            for i in range(2):
-                playsound.update()
-                winsound.PlaySound(f"{path}", winsound.SND_FILENAME)
-                playsound.update()
-
-        def exit():
-            confirm.destroy()
-            playsound.destroy()
-
-        logo = tk.PhotoImage(file = logo_path)
+        logo = tk.PhotoImage(file = "./system/logo-2_small.png")
         logo_label = ttk.Label(playsound, image = logo, style = "logo.TLabel")
         logo_label.place(x = 10, y = 0, width = 300, height = 100)
         logo_label.image = logo
@@ -333,27 +312,24 @@ class Main():
 
         text = f"{name}を呼んでいます"
         text_label = ttk.Label(playsound, text = text, style = "bold.TLabel")
-        text_label.place(x = 0, y = 100 + ((screen_height - 100 - 50 - button_height) / 2), width = screen_width, height = 50)
+        text_label.place(x = 0, y = 100, width = screen_width, height = screen_height - 100)
 
-        text = "キャンセルする"
-        button = ttk.Button(playsound, text = text, command = exit, style = "TButton")
-        button.place(x = (screen_width - button_width) / 2, y = 100 + ((screen_height - 100 - 50 - button_height) / 2) + 50, width = button_width, height = button_height)
+        playsound.update()
+        winsound.PlaySound(f"{path}", winsound.SND_FILENAME)
 
-        sound()
-        exit()
+        file_date = datetime.date.today().strftime("%Y%m%d")
+        year = datetime.datetime.now().strftime("%Y年")
+        month = datetime.datetime.now().strftime("%m月")
+        date = datetime.datetime.now().strftime("%d日")
+        time = datetime.datetime.now().strftime("%H時")
+        minutes = datetime.datetime.now().strftime("%M分")
+        seconds = datetime.datetime.now().strftime("%S秒")
+        with open(f"./log/{file_date}_log.csv", "a", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow([year, month, date, time, minutes, seconds, name])
 
-        # for i in range(2):
-        #     playsound.update()
-        #     winsound.PlaySound(f"{path}", winsound.SND_FILENAME)
-        #     playsound.update()
-
-        # confirm.destroy()
-        # playsound.destroy()
-
-        # date = datetime.date.today().strftime("%Y%m%d")
-        # time = datetime.datetime.now().strftime("%Y年%m月%d日%H時%M分%S秒")
-        # with open(f"./log/{date}_log.txt", "a", encoding = "utf-8") as f:
-        #     f.write(f"{time}に{name}が呼ばれました。\n")
+        confirm.destroy()
+        playsound.destroy()
 
     def help(self, event):
         help = tk.Toplevel()
@@ -393,33 +369,33 @@ class Main():
 
         text = "リンク"
         text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel", background = "whitesmoke")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = 50)
 
         text = "リポジトリー"
         text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
-        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50, width = 300, height = 50)
+        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2, width = 300, height = 50)
 
         logo = tk.PhotoImage(file = "./system/qr-repository.png")
         logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
-        logo_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50 + 50, width = 300, height = 300)
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2 + 50, width = 300, height = 300)
         logo_label.image = logo
 
         text = "https://github.com\n/cyber-yuito723/TeaChimer"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50 + 50 + 300, width = 300, height = 100)
+        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2 + 50 + 300, width = 300, height = 100)
 
         text = "Wiki"
         text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
-        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50, width = 300, height = 50)
+        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2, width = 300, height = 50)
 
         logo = tk.PhotoImage(file = "./system/qr-wiki.png")
         logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
-        logo_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50 + 50, width = 300, height = 300)
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2 + 50, width = 300, height = 300)
         logo_label.image = logo
 
         text = "https://github.com\n/cyber-yuito723/TeaChimer\n/wiki/How-to-use-TeaChimer"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50 + 50 + 300, width = 300, height = 100)
+        text_label.place(x = ((screen_width - 10 * 3) / 2 - 300 * 2) / 2 + 300, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2 + 50 + 300, width = 300, height = 100)
 
         sep = ttk.Separator(help_tab_0, orient = "vertical", style = "TSeparator")
         sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
@@ -429,11 +405,11 @@ class Main():
 
         text = "ショートカットキー"
         text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel", background = "whitesmoke")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = 50)
 
         text = "ヘルプ画面：「Ctrl」キー＋「H」キー\n終了：「Ctrl」キー＋「Q」キー"
         text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 50 + 300 + 100)) / 2 + 50, width = (screen_width - 10 * 3) / 2, height = 100)
+        text_label.place(x = 0, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2, width = (screen_width - 10 * 3) / 2, height = 100)
 
     def help_tab_1(self, help_tab):
         help_tab_1 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
@@ -444,37 +420,37 @@ class Main():
 
         text = "TeaChimerについて"
         text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel", background = "whitesmoke")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = 50)
 
         logo = tk.PhotoImage(file = "./system/logo-2_small.png")
         logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
-        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2 + 50, width = 300, height = 100)
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (100 + 50 + 75 + 75 + 50 + 50)) / 2, width = 300, height = 100)
         logo_label.image = logo
 
         logo = tk.PhotoImage(file = "./system/logo-2_beta_small.png")
         logo_label = ttk.Label(left_frame, image = logo, style = "logo.TLabel")
-        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2 + 300 + 10, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2 + 50, width = 300, height = 100)
+        logo_label.place(x = ((screen_width - 10 * 3) / 2 - (300 * 2 + 10)) / 2 + 300 + 10, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (100 + 50 + 75 + 75 + 50 + 50)) / 2, width = 300, height = 100)
         logo_label.image = logo
 
         text = f"TeaChimer-{version}"
         text_label = ttk.Label(left_frame, text = text, style = "bold.TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2 + 50 + 100, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100, width = (screen_width - 10 * 3) / 2, height = 50)
 
         text = f"version : {version}\nedition : {edition}"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2 + 50 + 100 + 50, width = (screen_width - 10 * 3) / 2, height = 75)
+        text_label.place(x = 0, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100 + 50, width = (screen_width - 10 * 3) / 2, height = 75)
 
         text = "　TeaChimerはオープンソースソフトウェアであり、GNU General Public License v3.0\nに基づいて再配布したり改変したりできます。"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2 + 50 + 100 + 50 + 75, width = (screen_width - 10 * 3) / 2, height = 75)
+        text_label.place(x = 0, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100 + 50 + 75, width = (screen_width - 10 * 3) / 2, height = 75)
 
         text = "website : https://github.com/cyber-yuito723/TeaChimer"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2 + 50 + 100 + 50 + 75 + 75, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100 + 50 + 75 + 75, width = (screen_width - 10 * 3) / 2, height = 50)
 
         text = "(C) 2023 cyber-yuito723"
         text_label = ttk.Label(left_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2 + 50 + 100 + 50 + 75 + 75 + 50, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (100 + 50 + 75 + 75 + 50 + 50)) / 2 + 100 + 50 + 75 + 75 + 50, width = (screen_width - 10 * 3) / 2, height = 50)
 
         sep = ttk.Separator(help_tab_1, orient = "vertical", style = "TSeparator")
         sep.place(x = (screen_width - 10 * 3) / 2 + 10 / 2, y = 0, width = 0, height = screen_height - 100 - 75 - 10 * 2)
@@ -484,7 +460,7 @@ class Main():
 
         text = "ライセンス告知(The license notices)"
         text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel", background = "whitesmoke")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2, width = (screen_width - 10 * 3) / 2, height = 50)
+        text_label.place(x = 0, y = 0, width = (screen_width - 10 * 3) / 2, height = 50)
 
         text = """This file is part of TeaChimer.
 
@@ -500,7 +476,7 @@ See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along
 with TeaChimer. If not, see "https://www.gnu.org/licenses/"."""
         text_label = ttk.Label(right_frame, text = text, style = "TLabel")
-        text_label.place(x = 0, y = ((screen_height - 100 - 75 - 10 * 2) - (50 + 100 + 50 + 75 + 75 + 50 + 50)) / 2 + 50, width = (screen_width - 10 * 3) / 2, height = 400)
+        text_label.place(x = 0, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (100 + 50 + 75 + 75 + 50 + 50)) / 2, width = (screen_width - 10 * 3) / 2, height = 400)
 
     def exit(self, event):
         exit = tk.Toplevel()
