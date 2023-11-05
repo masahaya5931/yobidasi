@@ -39,6 +39,11 @@
         <td>２０２３年１０月１５日</td>
         <td>新UIのTeaChimerで初めてのリリースです。</td>
     </tr>
+    <tr>
+        <td><a href = "https://github.com/cyber-yuito723/TeaChimer/releases/tag/v1.1.0">v1.1.0</a></td>
+        <td>２０２３年１１月５日</td>
+        <td>機能の追加と改良を行いました。</td>
+    </tr>
 </table>
 
 <h2>動作要件</h2>
