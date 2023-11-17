@@ -13,7 +13,7 @@
 </div>
 <br>
 <p>
-    <strong>最終更新日：２０２３年１０月１５日</strong>
+    <strong>最終更新日：２０２３年１１月１７日</strong>
 </p>
 
 <h2>概要</h2>
@@ -42,6 +42,11 @@
     <tr>
         <td><a href = "https://github.com/cyber-yuito723/TeaChimer/releases/tag/v1.1.0">v1.1.0</a></td>
         <td>２０２３年１１月５日</td>
+        <td>機能の追加と改良を行いました。</td>
+    </tr>
+    <tr>
+        <td><a href = "https://github.com/cyber-yuito723/TeaChimer/releases/tag/v1.2.0">v1.2.0</a></td>
+        <td>２０２３年１１月１７日</td>
         <td>機能の追加と改良を行いました。</td>
     </tr>
 </table>
