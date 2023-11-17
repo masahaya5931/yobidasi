@@ -1,5 +1,5 @@
 """
-TeaChimer-v1.1.0
+TeaChimer-v1.2.0
 (C) 2023 cyber-yuito723
 """
 
@@ -411,6 +411,14 @@ class Main():
         text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel")
         text_label.place(x = 0, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2, width = (screen_width - 10 * 3) / 2, height = 100)
 
+        text = "音声テスト"
+        text_label = ttk.Label(right_frame, text = text, style = "bold.TLabel", background = "whitesmoke")
+        text_label.place(x = 0, y = 50 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2 + 100 + ((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2, width = (screen_width - 10 * 3) / 2, height = 50)
+
+        text = "再生する"
+        button = ttk.Button(right_frame, text = text, command = lambda: winsound.PlaySound("./", winsound.SND_FILENAME), style = "TButton")
+        button.place(x = ((screen_width - 10 * 3) / 2 - button_width) / 2, y = 50 + (((screen_height - 100 - 75 - 10 * 2 - 50) - (50 + 300 + 100)) / 2 * 3) + 100 + 50, width = button_width, height = button_height)
+
     def help_tab_1(self, help_tab):
         help_tab_1 = ttk.Frame(help_tab, padding = 10, style = "TFrame")
         help_tab.add(help_tab_1, text = "ライセンス")
@@ -515,7 +523,7 @@ screen_height = root.winfo_screenheight()
 button_width = (screen_width - 10 * 6) / 5
 button_height = (screen_height - 100 - 35 - 10 * 6) / 5
 logo_path = "./system/logo-2_small.png"
-version = "v1.1.0"
+version = "v1.2.0"
 edition = "normal"
 if screen_width < 1500 or screen_height < 700:
     exit()
