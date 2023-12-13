@@ -44,11 +44,11 @@
         <td>２０２３年１１月５日</td>
         <td>機能の追加と改良を行いました。</td>
     </tr>
-    <tr>
+<!--     <tr>
         <td><a href = "https://github.com/cyber-yuito723/TeaChimer/releases/tag/v1.2.0">v1.2.0</a></td>
         <td>２０２３年１１月１７日</td>
         <td>機能の追加と改良を行いました。</td>
-    </tr>
+    </tr> -->
 </table>
 
 <h2>動作要件</h2>
