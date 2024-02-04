@@ -9,7 +9,7 @@ sys.dont_write_bytecode = True
 import flet as ft
 import time
 
-with open("./starting.txt", "r", encoding = "utf-8") as f:
+with open("./system/starting.txt", "r", encoding = "utf-8") as f:
     starting_txt = f.read()
 print(starting_txt)
 
